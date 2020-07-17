@@ -7,7 +7,7 @@ const config = {
     prefix: ";",
     queryParams: [
       ["How do I open the GUI menu?",  // Question (Not used by code)
-        [[[" gui ", " menu "], " how ", " do ", " i ", " open "], [" y ", " you ", " retard ", " faq ", "```", " monkey ", " javascript "]], // first index is positives next is negatives
+        [[[" gui ", " menu "], " how ", " do ", " i ", " open "], [" y ", " you ", " retard ", " faq ", "```", " monkey ", " javascript ", " install ", " get ", " download "]], // first index is positives next is negatives
         2, // How much does not have to be in the query
         "To open the KAMI Blue Gui, you should press the `Y` key on your keyboard. On a normal qwerty keyboard; it should be located to the right of the `T` key and to the left of the `U` key. To find out more, please read:\nhttps://kamiblue.org/faq"], // What does it respond when the message gets deleted
       
@@ -17,7 +17,7 @@ const config = {
         "No, Kami Blue will not be coming out for the current version of Minecraft. It will stay on version `1.12.2` because of how some of the code is. The developers, however, are working on a new client called Vasya. To find out more, please read:\nhttps://kamiblue.org/faq\nVasya Website: https://vasya.dominikaaaa.org/"],
    
       ["How do I install KAMI Blue?",
-      [[" how ", " do ", " i ", " install " [" this ", " kami "]],[" you ", " retard ", " faq ", "```", " monkey ", " javascript "]],
+      [[" how ", " do ", " i ", " install " [" this ", " kami "]],[" you ", " retard ", " faq ", "```", " monkey ", " javascript ", " gui ", " menu ", " hacks "]],
       2,
       "You can install KAMI Blue by first installing forge for Minecraft 1.12.2, then double clicking KAMI. This should open an installer where you can choose which flavor you want. Simple click a button and install. To find out more, please read:\nhttps://kamiblue.org/faq"]
     ],
@@ -113,7 +113,7 @@ client.on('message', async message => {
     }
   
     let query = ` ${message.content.toLowerCase().replace(/[^a-zA-Z 0-9]+/g,"")} `;
-    config["queryParams"].forEach(Params => {if(queryScanMessage(query, Params[1], Params[2]) && message.content.startsWith(prefix) && !!!message.member.roles.cache.get.length) return message.delete() && message.reply(Params[3]);})
+  config["queryParams"].forEach(Params => {if(queryScanMessage(query, Params[1], Params[2]) && !message.content.startsWith(prefix) && !!message.member.roles.cache.map.length) return message.delete() && message.reply(Params[3]);})
     
     
     // Command Handler
