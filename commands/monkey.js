@@ -3,7 +3,7 @@ const fs = require("graceful-fs");
 
 module.exports.run = async (client, message, args) => {
   
- var Monkeys = ["🐵","🐒","🦧","🐵 🐒 🦧","🙈","🙊","🙉","🙈🙊🙉"];
+ var Monkeys = ["🐵","🐒","🦧","🐵 🐒 🦧","🙈","🙊","🙉","🙊🙈🙉"];
     message.channel.send(Monkeys[Math.floor(Math.random() * 8)])
   
 } 
