@@ -3,24 +3,32 @@ const Discord = require("discord.js");
 const fs = require("graceful-fs");
 
 module.exports.run = async (client, message, args) => {
-    ms.init(args[0], 25565, function(result){
-        message.channel.send("One moment...");
-        if(ms.online){
-            message.channel.delete();
-            message.channel.send(`Server is running version ${ms.version} with ${ms.current_players} out of ${ms.max_players} players.`);
-            message.channel.send(`Message of the day: ${ms.motd}`);
-            message.channel.send(`Latency: ${ms.latency} ms.`)
-        } else {
-            message.channel.delete();
-            message.channel.send(`Server is offline!`);
-        }
-    });
+    try {
+        ms.init(args[0], 25565, function (result) {
+            if (ms.online) {
+                let statusEmbed = new Discord.MessageEmbed()
+                    .setTitle(`Minecraft server status of ${ms.address} on port ${ms.port}: `)
+                    .setDescription(
+                        `
+                    Server is running version ${ms.version} with ${ms.current_players} out of ${ms.max_players} players.
+                    Message of the day: ${ms.motd}
+                    Latency: ${ms.latency} ms.
+                        `
+                    )
+                message.channel.send(statusEmbed);
+            } else {
+                message.channel.send(`Server is offline!`);
+            }
+        });
+    }catch(err){
+        console.error(err);
+    }
 }
 
 module.exports.config = {
     name: "serverstat",
     aliases: ["stat"],
-    use: "stat [server ip]",
+    use: "serverstat [server ip]",
     description: "Gets status of server",
     state: "gamma",
     page: 1
