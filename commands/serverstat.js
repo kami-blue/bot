@@ -5,9 +5,15 @@ const fs = require("graceful-fs");
 module.exports.run = async (client, message, args) => {
     try {
         ServerStats(args[0]).then(info => {
+            let final = JSON.parse(info);
             let statusEmbed = new Discord.MessageEmbed()
                 .setTitle(`Minecraft server status of ${args[0]}: `)
-                .setDescription(info)
+                .setDescription(`
+                    Message Of The Day: ${final.motd}
+                    Online Players: ${final.players.now}
+                    Max Players: ${final.players.max}
+                    Version: ${final.server.name}
+                `)
                 .setColor(client.colors.kamiblue)
             message.channel.send(statusEmbed);
         })
