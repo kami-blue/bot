@@ -13,16 +13,16 @@
     "@discordjs/opus": "^0.3.2",
     "cat-ascii-faces": "^2.0.0",
     "cat-facts": "^1.0.2",
+    "child-process": "1.0.2",
     "discord.js": "discordjs/discord.js",
     "graceful-fs": "^4.2.4",
+    "minestats": "^2.0.0",
     "ms": "^2.1.2",
+    "node-fetch": "^2.6.0",
+    "opusscript": "^0.0.7",
     "yt-search": "^2.0.2",
     "ytdl-core": "^3.1.2",
-    "ytpl": "^0.1.22",
-    "child-process": "1.0.2",
-    "opusscript": "^0.0.7",
-    "node-fetch": "^2.6.0",
-    "minestats": "2.0.0"
+    "ytpl": "^0.1.22"
   },
   "repository": {
     "url": "https://github.com/humboldt123/notdoneyet"
