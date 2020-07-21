@@ -1,4 +1,4 @@
-const ms = require("../minestat/JavaScript");
+const ms = require("minestat/JavaScript");
 const Discord = require("discord.js");
 const fs = require("graceful-fs");
 
