@@ -16,7 +16,6 @@
     "child-process": "1.0.2",
     "discord.js": "discordjs/discord.js",
     "graceful-fs": "^4.2.4",
-    "minestats": "^2.0.0",
     "ms": "^2.1.2",
     "node-fetch": "^2.6.0",
     "opusscript": "^0.0.7",
