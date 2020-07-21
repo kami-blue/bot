@@ -21,7 +21,8 @@
     "ytpl": "^0.1.22",
     "child-process": "1.0.2",
     "opusscript": "^0.0.7",
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^2.6.0",
+    "minestats": "2.0.0"
   },
   "repository": {
     "url": "https://github.com/humboldt123/notdoneyet"
