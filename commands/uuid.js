@@ -1,13 +1,11 @@
+const fetch = require('node-fetch');
 const Discord = require("discord.js");
 const fs = require("graceful-fs");
 
 module.exports.run = async (client, message, args) => {
     try {
-        let result;
-
-        fetch(`https://api.mojang.com/users/profiles/minecraft/${args[0]}`)
-            .then(response => response.json())
-            .then(data => result = JSON.parse(data));
+        const response = await fetch(`https://api.mojang.com/users/profiles/minecraft/${args[0]}`);
+        const result = await JSON.parse(response);
 
         let uuidEmbed = new Discord.MessageEmbed()
                 .setTitle(`UUID of player ${result.name}: `)
