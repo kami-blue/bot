@@ -7,8 +7,8 @@ module.exports.run = async (client, message, args) => {
         UsernameToUUID(args[0]).then(info => {
             let final = JSON.parse(info);
             let statusEmbed = new Discord.MessageEmbed()
-                .setTitle(`UUID of player ${args[0]}: `)
-                .setDescription(final.name)
+                .setTitle(`UUID of player ${final.name}: `)
+                .setDescription(final.id)
                 .setColor(client.colors.kamiblue)
             message.channel.send(statusEmbed);
         })
