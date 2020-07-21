@@ -1,17 +1,20 @@
-const {UsernameToUUID} = require("minestats");
 const Discord = require("discord.js");
 const fs = require("graceful-fs");
 
 module.exports.run = async (client, message, args) => {
     try {
-        UsernameToUUID(args[0]).then(info => {
-            let final = JSON.parse(info);
-            let statusEmbed = new Discord.MessageEmbed()
-                .setTitle(`UUID of player ${final.name}: `)
-                .setDescription(final.id)
-                .setColor(client.colors.kamiblue)
-            message.channel.send(statusEmbed);
-        })
+        let result;
+
+        fetch(`https://api.mojang.com/users/profiles/minecraft/${args[0]}`)
+            .then(response => response.json())
+            .then(data => result = JSON.parse(data));
+
+        let uuidEmbed = new Discord.MessageEmbed()
+                .setTitle(`UUID of player ${result.name}: `)
+                .setDescription(result.id)
+                .setColor(client.colors.kamiblue);
+
+        message.channel.send(uuidEmbed);
     }catch(err){
         message.channel.send("Failed to get the uuid of player!");
         console.error(err);
