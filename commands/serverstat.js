@@ -5,19 +5,14 @@ const fs = require("graceful-fs");
 module.exports.run = async (client, message, args) => {
     try {
         let result;
-        fetch(`https://mcapi.us/server/status?ip=${args[0]}`)
+        fetch(`https://api.mcsrvstat.us/2/${args[0]}`)
             .then(response => response.json())
             .then(data => {
                 result = JSON.parse(JSON.stringify(data));
                 let statusEmbed = new Discord.MessageEmbed()
-                    .setTitle(`Server Status of ${args[0]}: `)
-                    .setDescription(`
-                    Server online? ${result.online}
-                    Message of the day: ${result.motd}
-                    Players online: ${result.players.now}
-                    Max Players online: ${result.players.max}
-                    Server version: ${result.server.name}
-                    `)
+                    .setTitle(`Server Status of ${result.hostname}: `)
+                    .setDescription(`IP of Target Server: ${result.ip} \n Message of the Day: ${result.motd.clean[0]} ${result.motd.clean[1]} \n Online Players: ${result.players.online} \n Max Players: ${result.players.max} \n Version: ${result.version}`)
+                    .setThumbnail(`https://api.mcsrvstat.us/icon/${args[0]}`)
                     .setColor(client.colors.kamiblue)
                 message.channel.send(statusEmbed);
             })
