@@ -19,7 +19,7 @@ module.exports.run = async (client, message, args) => {
                     let uuidEmbed = new Discord.MessageEmbed()
                         .setTitle('UUID of player ' + result.name)
                         .setThumbnail(`https://crafatar.com/renders/body/${result.id}`)
-                        .setDescription(result.id + "\n" + part1 + '-' + part2 + '-' + part3 + '-' + part4 + '-' + part5)
+                        .setDescription(part1 + '-' + part2 + '-' + part3 + '-' + part4 + '-' + part5)
                         .setColor(client.colors.kamiblue);
                     message.channel.send(uuidEmbed);
                 })
