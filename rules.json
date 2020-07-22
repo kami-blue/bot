@@ -21,11 +21,11 @@
   "6": {
     "a": "No spamming",
     "b": "This includes repeatedly pinging or dming someone",
-    "c": "This includes pinging multiple high ranking members for no reason at all"
+    "c": "_This includes pinging multiple high ranking members for no reason at all_"
   },
   "7": "No using an alt to avoid mutes or bans, it counts as ban evading",
   "8": "No trolling :wheelchair:",
-  "9": "Follow discord TOS: https://discordapp.com/terms",
-  "10": "Follow discord guidelines: https://discordapp.com/guidelines",
+  "9": "Follow discord TOS: <https://discordapp.com/terms>",
+  "10": "Follow discord guidelines: <https://discordapp.com/guidelines>",
   "message-from-sasha": "Don't ping a bunch of people at once because you don't know how to use something in the client. ask and wait for a response like a normal person thank you."
 }

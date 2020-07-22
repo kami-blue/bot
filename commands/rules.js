@@ -76,7 +76,7 @@ module.exports.run = async (client, message, args) => {
             message.channel.send(rules["message-from-sasha"]);
             break;
         default:
-            message.channel.send("Provide an input dumbass")
+            message.channel.send("Please provide a rule number")
     }
 }
 
