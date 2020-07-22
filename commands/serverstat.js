@@ -11,12 +11,12 @@ module.exports.run = async (client, message, args) => {
                 result = JSON.parse(JSON.stringify(data));
                 let statusEmbed = new Discord.MessageEmbed()
                     .setTitle(`Server Status of ${result.hostname}: `)
-                    .setDescription(`IP of Target Server: ${result.ip}\nMessage of the Day: ${result.motd.clean[0]} ${result.motd.clean[1]}\nOnline Players: ${result.players.online}\nMax Players: ${result.players.max}\nVersion: ${result.version}`)
+                    .setDescription(`IP of Target Server: ${result.ip} \n Message of the Day: ${result.motd.clean[0]} ${result.motd.clean[1]} \n Online Players: ${result.players.online} \n Max Players: ${result.players.max} \n Version: ${result.version}`)
                     .setThumbnail(`https://api.mcsrvstat.us/icon/${args[0]}`)
                     .setColor(client.colors.kamiblue)
                 message.channel.send(statusEmbed);
             })
-            .catch(err => channel.message.send(err))
+            .catch(err => message.channel.send(err))
 
     }catch(err){
         message.channel.send("Failed to get the info of server!");
