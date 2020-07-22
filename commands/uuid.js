@@ -9,16 +9,14 @@ module.exports.run = async (client, message, args) => {
                 .then(response => response.json())
                 .then(data => {
                     result = JSON.parse(JSON.stringify(data));
-                    console.log(result)
+                    let uuidEmbed = new Discord.MessageEmbed()
+                        .setTitle('UUID of player ' + result.name)
+                        .setThumbnail(`https://crafatar.com/renders/body/${result.id}`)
+                        .setDescription(result.id)
+                        .setColor(client.colors.kamiblue);
+                    message.channel.send(uuidEmbed);
                 })
                 .catch(err => console.error(err))
-
-            let uuidEmbed = new Discord.MessageEmbed()
-                .setTitle('UUID of player ' + result)
-                .setDescription(result.id)
-                .setColor(client.colors.kamiblue);
-
-            message.channel.send(uuidEmbed);
         } catch (err) {
             message.channel.send("Failed to get the uuid of player!");
             console.error(err);
