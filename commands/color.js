@@ -4,7 +4,7 @@ const fs = require("graceful-fs");
 
 module.exports.run = async (client, message, args) => {
     let result;
-    try{
+    try {
         //message.channel.send(`https://www.thecolorapi.com/id?${args[0]}=${args[1]}`);
         fetch(`https://www.thecolorapi.com/id?${args[0]}=${args[1]}`)
             .then(response => response.json())
@@ -17,9 +17,9 @@ module.exports.run = async (client, message, args) => {
                     .setColor(result.hex.value)
                 message.channel.send(colorEmbed)
             })
-    }catch (err) {
-        message.channel.send("Error!")
-       console.error(err);
+    } catch (err) {
+        message.channel.send("Error parsing color! Use `;help color`")
+        console.error(err);
     }
 }
 
