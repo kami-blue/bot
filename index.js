@@ -102,7 +102,6 @@ client.on('message', async message => {
 client.on('messageReactionAdd', async (reaction, user) => {
     if(reaction.emoji.toString() === "⭐") {
         await reaction.users.remove('479654048187023375') //rule 6
-        await reaction.users.remove('609779091247333389') //rule 6
     }
     if (reaction.partial) {
         try {
