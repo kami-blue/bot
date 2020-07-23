@@ -3,7 +3,7 @@ const fs = require("graceful-fs");
 
 module.exports.run = async (client, message, args) => {
     const msg = client.channels.cache.messages.fetch(args[0]).toString();
-    client.channels.get('634012886930423818').send(msg)
+    client.channels.get('735680230148276286').send(msg)
 }
 
 module.exports.config = {
