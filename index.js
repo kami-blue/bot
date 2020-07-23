@@ -185,4 +185,26 @@ client.on('message', async message => {
     }
 });
 
+client.on('messageReactionAdd', (reaction, user) => {
+    let starboard;
+    let voteList = [];
+    let message = reaction.message;
+    let emoji = reaction.emoji;
+
+    if (emoji.name === '✅') {
+        message.guild.fetchMember(user.id).then(member => {
+            voteList.push(user.id)
+            if(voteList.includes(user.id)){
+                //Do Nothing??
+            } else {
+                starboard++
+            }
+        });
+    }
+
+    if(starboard >= 2){
+        client.channels.get('735680230148276286').send(msg);
+    }
+});
+
 client.login(auth.token);
