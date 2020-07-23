@@ -195,7 +195,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
         }
     }
 
-    if(reaction.emoji.toString() === "⭐" && reaction.cout >= 2){
+    if(reaction.emoji.toString() === "⭐" && reaction.count >= 2){
         let starEmbed = new Discord.MessageEmbed()
             .setTitle(`Star message: `)
             .setDescription(reaction.message.content)
