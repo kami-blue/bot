@@ -185,6 +185,7 @@ client.on('message', async message => {
     }
 });
 
+//starboard 
 client.on('messageReactionAdd', async (reaction, user) => {
     if (reaction.partial) {
         try {
@@ -194,15 +195,14 @@ client.on('messageReactionAdd', async (reaction, user) => {
             return;
         }
     }
-
+    
     if(reaction.emoji.toString() === "⭐" && reaction.count >= 2){
         let starEmbed = new Discord.MessageEmbed()
             .setTitle(`Star message: `)
             .setDescription(reaction.message.content)
-            .setAuthor(reaction.message.author, reaction.message.author.avatar)
             .setColor(client.colors.yellow)
             .setTimestamp();
-        client.channels.cache.get('735680230148276286').send(starEmbed)
+        client.channels.cache.get('735680230148276286').send(starEmbed);
     }
 });
 
