@@ -187,6 +187,11 @@ client.on('message', async message => {
 
 //starboard 
 client.on('messageReactionAdd', async (reaction, user) => {
+    if(reaction.emoji.toString() === "⭐") {
+        await reaction.users.remove('479654048187023375') //rule 6
+        await reaction.users.remove('609779091247333389') //rule 6
+    }
+
     if (reaction.partial) {
         try {
             await reaction.fetch();
@@ -195,13 +200,17 @@ client.on('messageReactionAdd', async (reaction, user) => {
             return;
         }
     }
-    
-    if(reaction.emoji.toString() === "⭐" && reaction.count >= 2){
+
+
+
+    if(reaction.emoji.toString() === "⭐" && reaction.count >= 3){
         let starEmbed = new Discord.MessageEmbed()
-            .setTitle(`Star message: `)
+            .setTitle(`Star Message from ${reaction.message.author.username}:`)
             .setDescription(reaction.message.content)
+            .setThumbnail(reaction.message.author.avatarURL())
             .setColor(client.colors.yellow)
             .setTimestamp();
+
         client.channels.cache.get('735680230148276286').send(starEmbed);
     }
 });
