@@ -185,25 +185,24 @@ client.on('message', async message => {
     }
 });
 
-client.on('messageReactionAdd', (reaction, user) => {
-    let starboard;
-    let voteList = [];
-    let message = reaction.message;
-    let emoji = reaction.emoji;
-
-    if (emoji.name === '✅') {
-        message.guild.fetchMember(user.id).then(member => {
-            voteList.push(user.id)
-            if(voteList.includes(user.id)){
-                //Do Nothing??
-            } else {
-                starboard++
-            }
-        });
+client.on('messageReactionAdd', async (reaction, user) => {
+    if (reaction.partial) {
+        try {
+            await reaction.fetch();
+        } catch (err) {
+            console.error('Something went wrong when fetching the message: ', err);
+            return;
+        }
     }
 
-    if(starboard >= 2){
-        client.channels.get('735680230148276286').send(msg);
+    if(reaction.emoji.toString() === "⭐" && reaction.cout >= 2){
+        let starEmbed = new Discord.MessageEmbed()
+            .setTitle(`Star message: `)
+            .setDescription(reaction.message.content)
+            .setAuthor(reaction.message.author, reaction.message.author.avatar)
+            .setColor(client.colors.yellow)
+            .setTimestamp();
+        client.channels.cache.get('735680230148276286').send(starEmbed)
     }
 });
 
