@@ -120,7 +120,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
                 }
             }
 
-            if(reaction.count >= 3){
+            if(reaction.count == 3){
                 let starEmbed = new Discord.MessageEmbed()
                     .setTitle("Star Message :")
                     .setDescription(reaction.message.content)
