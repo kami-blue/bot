@@ -105,27 +105,33 @@ client.on('message', async message => {
 
 //starboard 
 client.on('messageReactionAdd', async (reaction, user) => {
+    let voteList = [];
     if(reaction.emoji.toString() === "⭐") {
-        await reaction.users.remove('479654048187023375') //rule 6
-    }
-    if (reaction.partial) {
-        try {
-            await reaction.fetch();
-        } catch (err) {
-            console.error('Something went wrong when fetching the message: ', err);
-            return;
+        //just mute that person if he keep spamming
+        client.channels.cache.get('579741237377236992').send(`${user.username} voted for starboard`);
+        if(!voteList.includes(user.username)){
+            voteList.push(user.username)
+            if (reaction.partial) {
+                try {
+                    await reaction.fetch();
+                } catch (err) {
+                    console.error('Something went wrong when fetching the message: ', err);
+                    return;
+                }
+            }
+
+            if(reaction.count >= 2){
+                let starEmbed = new Discord.MessageEmbed()
+                    .setTitle("Star Message :")
+                    .setDescription(reaction.message.content)
+                    .setFooter(reaction.message.author.username, reaction.message.author.avatarURL())
+                    .setColor(client.colors.yellow)
+                    .setTimestamp();
+                client.channels.cache.get('735680230148276286').send(starEmbed);
+            }
         }
     }
-    if(reaction.emoji.toString() === "⭐" && reaction.count >= 3){
-        let starEmbed = new Discord.MessageEmbed()
-            .setTitle(`Star Message from ${reaction.message.author.username}:`)
-            .setDescription(reaction.message.content)
-            .setThumbnail(reaction.message.author.avatarURL())
-            .setColor(client.colors.yellow)
-            .setTimestamp();
 
-        client.channels.cache.get('735680230148276286').send(starEmbed);
-    }
 });
 
 /* when message is edited */
