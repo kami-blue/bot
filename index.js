@@ -109,18 +109,12 @@ client.on('messageReactionAdd', async (reaction, user) => {
     if(reaction.emoji.toString() === "⭐") {
         //just mute that person if he keep spamming
         client.channels.cache.get('579741237377236992').send(`${user.username} voted for starboard`);
-        if(!voteList.includes(user.username)){
+        if(voteList.includes(user.username)) {
+            client.channels.cache.get('579741237377236992').send(`${user.username} is trying to spam!`);
+        } else {
             voteList.push(user.username)
-            if (reaction.partial) {
-                try {
-                    await reaction.fetch();
-                } catch (err) {
-                    console.error('Something went wrong when fetching the message: ', err);
-                    return;
-                }
-            }
 
-            if(reaction.count == 3){
+            if(reaction.count === 3){
                 let starEmbed = new Discord.MessageEmbed()
                     .setTitle("Star Message :")
                     .setDescription(reaction.message.content)
