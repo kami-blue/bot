@@ -14,6 +14,7 @@ module.exports.run = async (client, message, args) => {
         "https://tenor.com/view/funny-gif-10879973",
         "https://media.discordapp.net/attachments/696038770558107679/700191886681309214/ShallowUnhealthyDeermouse-size_restricted.gif",
         "https://tenor.com/view/monkey-with-money-happy-withmoney-swag-dollars-more-money-gif-14116367"
+        "https://cdn.discordapp.com/attachments/537457343622021131/736039744206798928/Monkey_Orange.gif"
     ];
 
     message.channel.send(randomChimpEvents[Math.floor(Math.random() * randomChimpEvents.length)]);
