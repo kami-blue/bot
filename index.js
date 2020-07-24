@@ -113,11 +113,12 @@ client.on('messageReactionAdd', async (reaction, user) => {
         if (!pinned && reaction.message.content !== pinnedMessage) {
             client.channels.cache.get('579741237377236992').send(`${user.username} voted for starboard`);
 
-            if (reaction.count === 3) {
+            if (reaction.count === 1) {
                 pinned = true;
                 pinnedMessage = reaction.message.content;
                 let starEmbed = new Discord.MessageEmbed()
-                    .setTitle("[link]")
+                    .setAuthor("カミブルー！", "https://cdn.discordapp.com/avatars/638403216278683661/1e8bed04cb18e1cb1239e208a01893a1.png", "https://kamiblue.org")
+                    .setTitle("Jump to message")
                     .setURL(reaction.message.url.toString())
                     .setDescription(reaction.message.content)
                     .setFooter(reaction.message.author.username, reaction.message.author.avatarURL())
