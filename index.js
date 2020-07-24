@@ -104,13 +104,14 @@ client.on('message', async message => {
 });
 
 //starboard
+//( ͡° ͜ʖ ͡°)
 let pinned = false;
 let pinnedMessage;
 client.on('messageReactionAdd', async (reaction, user) => {
     let voteList = [];
     if(reaction.emoji.toString() === "⭐") {
         if (!pinned && reaction.message.content !== pinnedMessage) {
-            client.channels.cache.get('735680230148276286').send(`${user.username} voted for starboard`);
+            client.channels.cache.get('579741237377236992').send(`${user.username} voted for starboard`);
 
             if (reaction.count === 3) {
                 pinned = true;
