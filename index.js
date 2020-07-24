@@ -113,7 +113,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
         if (!pinned && reaction.message.content !== pinnedMessage) {
             client.channels.cache.get('579741237377236992').send(`${user.username} voted for starboard`);
 
-            if (reaction.count === 1) {
+            if (reaction.count === 3) {
                 pinned = true;
                 pinnedMessage = reaction.message.content;
                 let starEmbed = new Discord.MessageEmbed()
