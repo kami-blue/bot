@@ -103,20 +103,21 @@ client.on('message', async message => {
     autoResponder(message);
 });
 
-//starboard 
+//starboard
+let pinned = false;
+let pinnedMessage;
 client.on('messageReactionAdd', async (reaction, user) => {
     let voteList = [];
     if(reaction.emoji.toString() === "⭐") {
-        //just mute that person if he keep spamming
-        client.channels.cache.get('579741237377236992').send(`${user.username} voted for starboard`);
-        if(voteList.includes(user.username)) {
-            client.channels.cache.get('579741237377236992').send(`${user.username} is trying to spam!`);
-        } else {
-            voteList.push(user.username)
+        if (!pinned && reaction.message.content !== pinnedMessage) {
+            client.channels.cache.get('735680230148276286').send(`${user.username} voted for starboard`);
 
-            if(reaction.count === 3){
+            if (reaction.count === 3) {
+                pinned = true;
+                pinnedMessage = reaction.message.content;
                 let starEmbed = new Discord.MessageEmbed()
                     .setTitle("Star Message :")
+                    .setURL(reaction.message.url.toString())
                     .setDescription(reaction.message.content)
                     .setFooter(reaction.message.author.username, reaction.message.author.avatarURL())
                     .setColor(client.colors.yellow)
@@ -125,7 +126,6 @@ client.on('messageReactionAdd', async (reaction, user) => {
             }
         }
     }
-
 });
 
 /* when message is edited */
