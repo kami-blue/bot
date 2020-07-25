@@ -105,12 +105,13 @@ client.on('message', async message => {
 
 //starboard
 //( ͡° ͜ʖ ͡°)
-let pinnedMessage;
+let pinnedMessages = [];
+let i = 0;
 client.on('messageReactionAdd', async (reaction, user) => {
-    if(reaction.emoji.toString() === "⭐" && reaction.message.content !== pinnedMessage) {
+    if(reaction.emoji.toString() === "⭐" && pinnedMessages.includes(reaction.message.content)) {
             client.channels.cache.get('579741237377236992').send(`${user.username} voted for starboard`);
             if (reaction.count === 3) {
-                pinnedMessage = reaction.message.content;
+                pinnedMessages[i] = reaction.message.content;
                 let starEmbed = new Discord.MessageEmbed()
                     .setAuthor("カミブルー！", "https://cdn.discordapp.com/avatars/638403216278683661/1e8bed04cb18e1cb1239e208a01893a1.png", "https://kamiblue.org")
                     .setTitle("Jump to message")
@@ -120,6 +121,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
                     .setColor(client.colors.yellow)
                     .setTimestamp();
                 client.channels.cache.get('735680230148276286').send(starEmbed);
+                i++
             }
     }
 });
