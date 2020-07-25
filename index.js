@@ -108,7 +108,7 @@ client.on('message', async message => {
 let pinnedMessages = [];
 let i = 0;
 client.on('messageReactionAdd', async (reaction, user) => {
-    if(reaction.emoji.toString() === "⭐" && pinnedMessages.includes(reaction.message.content)) {
+    if(reaction.emoji.toString() === "⭐" && !pinnedMessages.includes(reaction.message.content)) {
             client.channels.cache.get('579741237377236992').send(`${user.username} voted for starboard`);
             if (reaction.count === 3) {
                 pinnedMessages[i] = reaction.message.content;
