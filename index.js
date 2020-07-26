@@ -107,6 +107,14 @@ client.on('message', async message => {
 //( ͡° ͜ʖ ͡°)
 let pinnedMessages = [];
 let i = 0;
+
+//small brain function that inserts things
+function insert(main_string, ins_string, pos) {
+    if(typeof(pos) == "undefined") {pos = 0;}
+    if(typeof(ins_string) == "undefined") {ins_string = '';}
+    return main_string.slice(0, pos) + ins_string + main_string.slice(pos);
+}
+
 client.on('messageReactionAdd', async (reaction, user) => {
     if(reaction.emoji.toString() === "⭐" && !pinnedMessages.includes(reaction.message.content)) {
             client.channels.cache.get('579741237377236992').send(`${user.username} voted for starboard`);
@@ -115,7 +123,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
                 let starEmbed = new Discord.MessageEmbed()
                     .setAuthor("カミブルー！", "https://cdn.discordapp.com/avatars/638403216278683661/1e8bed04cb18e1cb1239e208a01893a1.png", "https://kamiblue.org")
                     .setTitle("Jump to message")
-                    .setURL(reaction.message.url.toString())
+                    .setURL(insert(reaction.message.url.toString(), "app", 15))
                     .setDescription(reaction.message.content)
                     .setFooter(reaction.message.author.username, reaction.message.author.avatarURL())
                     .setColor(client.colors.yellow)
