@@ -110,17 +110,17 @@ let i = 0;
 
 client.on('messageReactionAdd', async (reaction, user) => {
     if(reaction.emoji.toString() === "⭐" && !pinnedMessages.includes(reaction.message.content)) {
-            client.channels.cache.get('579741237377236992').send(`${user.username} voted for starboard`);
-            if (reaction.count === 3) {
+            client.channels.cache.get('735922655735054479').send(`${user.username} voted for starboard`);
+            if (reaction.count === 1) {
                 pinnedMessages[i] = reaction.message.content;
                 let starEmbed = new Discord.MessageEmbed()
                     .setAuthor("カミブルー！", "https://cdn.discordapp.com/avatars/638403216278683661/1e8bed04cb18e1cb1239e208a01893a1.png", "https://kamiblue.org")
-                    .setTitle(reaction.message.content)
-                    .setDescription(reaction.message.url.toString().replace("discord", "discordapp"))
+                    .setDescription(reaction.message.content)
+                    .addField("[link]", reaction.message.url, true)
                     .setFooter(reaction.message.author.username, reaction.message.author.avatarURL())
                     .setColor(client.colors.yellow)
                     .setTimestamp();
-                client.channels.cache.get('735680230148276286').send(starEmbed);
+                client.channels.cache.get('735922655735054479').send(starEmbed);
                 i++
             }
     }
