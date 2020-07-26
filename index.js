@@ -115,9 +115,8 @@ client.on('messageReactionAdd', async (reaction, user) => {
                 pinnedMessages[i] = reaction.message.content;
                 let starEmbed = new Discord.MessageEmbed()
                     .setAuthor("カミブルー！", "https://cdn.discordapp.com/avatars/638403216278683661/1e8bed04cb18e1cb1239e208a01893a1.png", "https://kamiblue.org")
-                    .setTitle("Jump to message")
-                    .setURL(reaction.message.url.toString().replace("discord", "discordapp"))
-                    .setDescription(reaction.message.content)
+                    .setTitle(reaction.message.content)
+                    .setDescription(reaction.message.url.toString().replace("discord", "discordapp"))
                     .setFooter(reaction.message.author.username, reaction.message.author.avatarURL())
                     .setColor(client.colors.yellow)
                     .setTimestamp();
