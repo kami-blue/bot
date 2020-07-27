@@ -17,7 +17,17 @@ node index.js
 Requirements: 
 ```
 node >=12
+
+//on Linux
 sudo apt-get install build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev
+
+//on Windows
+npm i -g --add-python-to-path --vs2015 --production windows-build-tools
+
+//on MacOS
+xcode-select --install
+
+npm i better-sqlite3
 ```
 
 `auth.json` example:

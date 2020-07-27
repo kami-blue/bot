@@ -122,3 +122,6 @@ package-lock.json
 
 # Watch me accidentally commit the token to the repo 🤨
 auth.json 
+
+# uwucounter
+/data/
