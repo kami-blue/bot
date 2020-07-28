@@ -135,7 +135,6 @@ client.on('messageReactionAdd', async (reaction, user) => {
  * @author sourTaste000
  */
 const uwuCounter = new Enmap({name: "uwuCounter"});
-let j = 0;
 
 client.on("ready", async () => {
     await uwuCounter.defer;
