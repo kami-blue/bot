@@ -105,7 +105,7 @@ client.on('message', async message => {
 });
 
 /**
- * @name starboard
+ * @module starboard
  * @author sourTaste000
  * ( ͡° ͜ʖ ͡°)
  */
@@ -117,7 +117,8 @@ client.on('messageReactionAdd', async (reaction, user) => {
             client.channels.cache.get('579741237377236992').send(`${user.username} voted for starboard`);
             if (reaction.count === 3) {
                 pinnedMessages[i] = reaction.message.content;
-                let starEmbed = new Discord.MessageEmbed()
+                const image = reaction.message.attachments.size > 0 ? reaction.message.attachments.array()[0].url : ''; //very pog lol
+                const starEmbed = new Discord.MessageEmbed()
                     .setAuthor("カミブルー！", "https://cdn.discordapp.com/avatars/638403216278683661/1e8bed04cb18e1cb1239e208a01893a1.png", "https://kamiblue.org")
                     .setDescription(reaction.message.content)
                     .addField("[link]", reaction.message.url, true)
@@ -125,13 +126,14 @@ client.on('messageReactionAdd', async (reaction, user) => {
                     .setColor(client.colors.yellow)
                     .setTimestamp();
                 client.channels.cache.get('735680230148276286').send(starEmbed);
+                client.channels.cache.get('735680230148276286').send(image);
                 i++
             }
     }
 });
 
 /**
- * @name uwuCounter
+ * @module uwuCounter
  * @author sourTaste000
  */
 const uwuCounter = new Enmap({name: "uwuCounter"});
