@@ -148,11 +148,11 @@ client.on('message', async message => {
         if (message.author.bot) return;
         try{
             uwuCounter.get(`${message.guild.id}-${message.author.id}`, "uwuTimes")
+            uwuCounter.inc(`${message.guild.id}-${message.author.id} -1`, "uwuTimes")
         }catch(err){
             uwuCounter.ensure(`${message.guild.id}-${message.author.id}`, {user: message.author.id, uwuTimes: 1});
         }
-        
-        uwuCounter.inc(`${message.guild.id}-${message.author.id} -1`, "uwuTimes")
+       
     }
     if(message.content.toLowerCase().includes(";counter")){
         message.channel.send(`You said uwu ${uwuCounter.get(`${message.guild.id}-${message.author.id}`, "uwuTimes")} times!`);
