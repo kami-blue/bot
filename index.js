@@ -144,9 +144,14 @@ client.on("ready", async () => {
 })
 
 client.on('message', async message => {
+    if(message.content.toLowerCase().includes(";createmap")){
+        if (message.author.bot) return;
+        message.channel.send("ok")
+        uwuCounter.ensure(`${message.guild.id}-${message.author.id}`, {user: message.author.id, uwuTimes: 1});
+    }
+
     if(message.content.toLowerCase().includes("uwu") || message.content.toLowerCase().includes("owo")){
         if (message.author.bot) return;
-        uwuCounter.ensure(`${message.guild.id}-${message.author.id}`, {user: message.author.id, uwuTimes: 1});
         uwuCounter.inc(`${message.guild.id}-${message.author.id}`, "uwuTimes")
     }
 

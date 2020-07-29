@@ -6,15 +6,26 @@ const fetch = require("node-fetch");
 module.exports.run = async (client, message, args) => {
     if (!args || !args[0]) return;
     try {
-        fetch("https://api.github.com/repos/kami-blue/" + args[0] + "/issues?page=0&per_page=1").then(res => res.json()).then((out) => {
-            console.log(out.length)
-
-            if (((args[1] == args[1]) && (args[1] > out.length - 1) && !!args[1]) && args[1] !== "1") {
-                message.channel.send("**Here's the issue!**\nhttps://github.com/kami-blue/" + args[0] + "/issues/" + args[1]);
-            } else {
-                message.channel.send("**Invalid Issue!**\nkami-blue/" + args[0] + "/issues/" + args[1] + " does not exist");
-            }
-        })
+        let result;
+        let milestone;
+        fetch(`https://api.github.com/repos/kami-blue/${args[0]}/issues/${args[1]}`)
+            .then(response => response.json())
+            .then(data => {
+                result = JSON.parse(JSON.stringify(data));
+                try{if(!result.milestone.title == null){milestone = result.milestone.title}}catch (err){milestone = "None"}
+                let issueEmbed = new Discord.MessageEmbed()
+                    .setAuthor("カミブルー！", "https://cdn.discordapp.com/avatars/638403216278683661/1e8bed04cb18e1cb1239e208a01893a1.png", "https://kamiblue.org")
+                    .setTitle(result.title)
+                    .setURL(result.html_url)
+                    .setThumbnail(result.user.avatar_url)
+                    .setDescription(result.body)
+                    .addField("Assignee", `${result.assignee.login}`)
+                    .addField("Labels", result.labels.forEach(length => length))
+                    .addField("Assignee", result.assignees.forEach(assignees => assignees))
+                    .addField("Milestone", milestone)
+                    .setColor(client.colors.kamiblue)
+                message.channel.send(issueEmbed)
+            })
     } catch (e) {
         message.channel.send("*Here's the issue!*\nCould not confirm validity of issue\nhttps://github.com/kami-blue/" + args[0] + "/issues/" + args[1]);
     }
