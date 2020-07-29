@@ -20,8 +20,10 @@ module.exports.run = async (client, message, args) => {
                     .setThumbnail(result.user.avatar_url)
                     .setDescription(result.body)
                     .addField("Assignee", `${result.assignee.login}`)
+                    //someone fix these
                     .addField("Labels", result.labels.forEach(length => length))
                     .addField("Assignee", result.assignees.forEach(assignees => assignees))
+
                     .addField("Milestone", milestone)
                     .setColor(client.colors.kamiblue)
                 message.channel.send(issueEmbed)
