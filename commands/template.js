@@ -13,5 +13,5 @@ module.exports.config = {
     use: "template",
     description: "Temporary command to test if the bot is up!",
     state: "gamma",
-    page: -1
+    page: 4
 };
