@@ -17,7 +17,7 @@ module.exports.run = async (client, message, args) => {
     let memberMute = message.guild.member;
     let userMute = message.mentions.users.first();
     let muteRoleMute = (message.guild.roles.cache.find(role => role.name === "Muted"));
-    if (!muteRoleMute) muteRoleMute = (message.guild.roles.cache.find(role => role.name === "Unsavory"));
+    if (!muteRoleMute) muteRoleMute = (message.guild.roles.cache.find(role => role.name === "🤡 Muted"));
     if (!muteRoleMute) return message.channel.send(client.msg["mute_role_undefined"]);
     if (message.mentions.users.size < 1) return message.channel.send(client.msg["mute_user_undefined"])
     if (message.author.id === userMute.id) return message.channel.send(client.msg["mute_user_invalid"])
@@ -57,7 +57,7 @@ module.exports.run = async (client, message, args) => {
 
 module.exports.config = {
     name: "mute",
-    aliases: ["unsavory", "unsavoury", "dunce", "duncecap"],
+    aliases: ["clown", "cringe"],
     use: "mute [@User] [Time] [Reason]",
     description: "Mute somebody",
     state : "gamma",
