@@ -16,7 +16,7 @@ module.exports.run = async (client, message, args) => {
     let guildMute = message.guild;
     let memberMute = message.guild.member;
     let userMute = message.mentions.users.first();
-    let muteRoleMute = (message.guild.roles.cache.find(role => role.name === "Muted"));
+    let muteRoleMute = (message.guild.roles.cache.find(role => role.name === "🤡 Muted"));
     if (!muteRoleMute) muteRoleMute = (message.guild.roles.cache.find(role => role.name === "🤡 Muted"));
     if (!muteRoleMute) return message.channel.send(client.msg["mute_role_undefined"]);
     if (message.mentions.users.size < 1) return message.channel.send(client.msg["mute_user_undefined"])
