@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 const fs = require("graceful-fs");
 const fetch = require("node-fetch");
+const auth = require("../auth.json");
 
 /**
  * @author humboldt123
@@ -11,7 +12,7 @@ const fetch = require("node-fetch");
 module.exports.run = async (client, message, args) => {
     if (!args || !args[0]) return; 
     try { // declare let below not here, thats now how the let scope works :/
-        fetch(`https://api.github.com/repos/kami-blue/${args[0]}/issues/${args[1]}`)
+        fetch(`https://api.github.com/repos/kami-blue/${args[0]}/issues/${args[1]}`, {headers: {Authorization: `token ${auth.githubtoken}`}})
             .then(response => response.json())
             .then(data => {
                 result = JSON.parse(JSON.stringify(data));
