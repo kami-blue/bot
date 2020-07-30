@@ -8,17 +8,16 @@ const fs = require("graceful-fs");
  */
 
 module.exports.run = async (client, message, args) => {
-    let i = 0;
     let clown = [];
 
-    clown[i] = message.guild.members.cache.get(args[0]);
-    clown[i].roles.add('580409999185018891');
+    clown[client.i] = message.guild.members.cache.get(args[0]);
+    clown[client.i].roles.add('580409999185018891');
 
     setTimeout(() => {
-        clown[i].roles.remove('580409999185018891');
+        clown[client.i].roles.remove('580409999185018891');
     }, args[2]*60000)
 
-    i++;
+    client.i++;
 }
 
 module.exports.config = {

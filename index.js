@@ -46,6 +46,7 @@ client.colors = {
 }
 client.config = config;
 client.uwuCounter = new Enmap({name: "uwuCounter"});
+client.i = 0;
 
 client.on("ready", () => {
     console.log("Bot loaded!");
