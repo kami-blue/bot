@@ -13,7 +13,7 @@ module.exports.run = async (client, message, args) => {
         .setColor(client.colors.kamiblue)
         .setTitle(catFacts.random())
         .setDescription(cats())
-        .setImage(`https://cataas.com/cat`)
+        .setImage(`http://www.randomkittengenerator.com/cats/rotator.php`)
 
     message.channel.send(catEmbed);
 
