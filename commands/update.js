@@ -3,7 +3,7 @@ const fs = require("graceful-fs");
 const exec = require('child_process').exec;
 
 module.exports.run = async (client, message, args) => {
-    if (!(message.author.id === "563138570953687061") && !(message.author.id === "297096161842429963")) return;
+    if(message.author.hasPermission('ADMINISTRATOR')){
     message.reply("ok")
     const myShellScript = exec('sh update.sh /home/mika/bot/');
     myShellScript.stdout.on('data', (data) => {
@@ -14,7 +14,7 @@ module.exports.run = async (client, message, args) => {
     myShellScript.stderr.on('data', (data) => {
         console.error(data);
     });
-
+    }
 }
 
 module.exports.config = {
