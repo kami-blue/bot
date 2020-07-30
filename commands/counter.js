@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const fs = require("graceful-fs");
 
 module.exports.run = async (client, message, args) => {
-    let user
+    let user;
     if (!args[0]) {
         user = client.users.cache.get(message.author.id);
     } else {
