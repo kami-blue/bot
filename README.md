@@ -33,7 +33,8 @@ npm i better-sqlite3
 `auth.json` example:
 ```json
 {
-  "token": "tokenhere"
+  "token": "tokenhere",
+  "githubtoken": "tokenhere"
 }
 ```
 
