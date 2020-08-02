@@ -3,6 +3,7 @@ const Discord = require("discord.js");
 const fs = require("graceful-fs");
 
 module.exports.run = async (client, message, args) => {
+    if(isNaN(args[0]) || args[0].toLowerCase() === "undefined") return 1;
     try {
         let result;
         let part1, part2, part3, part4, part5;
