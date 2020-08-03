@@ -7,6 +7,7 @@ const auth = require("../auth.json");
  * @author humboldt123
  * Edited by sourTaste000
  * Fixed by humboldt123
+ * Updated by sourTaste000 on 8/2/2020
  */
 
 module.exports.run = async (client, message, args) => {
@@ -17,16 +18,20 @@ module.exports.run = async (client, message, args) => {
             .then(data => {
                 result = JSON.parse(JSON.stringify(data));
                 try {
+                    let i = 0;
+                    let j = 0;
                     let milestone = result.milestone || {"title":"No Milestone"};
                     let assignee = result.assignee || {"login":"None"};
-                    let labels = result.labels || [{"name":"None"}] // Such a fucking hack but it looks fancy
+                    let labels = result.labels || [{"name":"None"}]; // Such a fucking hack but it looks fancy
+                    let labels1 = [];
+                    for(i in labels){labels1.push(labels[i].name)}
                     let issueEmbed = new Discord.MessageEmbed()
                         .setAuthor("カミブルー！", "https://cdn.discordapp.com/avatars/638403216278683661/1e8bed04cb18e1cb1239e208a01893a1.png", "https://kamiblue.org")
                         .setTitle(result.title)
                         .setURL(result.html_url)
                         .setThumbnail(result.user.avatar_url)
                         .setDescription(result.body)
-                        .addField("Labels", labels[0].name)
+                        .addField("Labels", labels1)
                         .addField("Assignee", assignee.login)
                         .addField("Milestone", milestone.title)
                         .setColor(client.colors.kamiblue)
