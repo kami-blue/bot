@@ -41,7 +41,10 @@ npm i better-sqlite3
 ```
 
 ## Thank you
-
-Javascript: for being so cool and awesome
-
-if anybody knows DiscordJS or NodeJS please help I cannot close all three trillion issues myself aaaaaaaa
+[opus](https://github.com/discordjs/opus)  
+[discord.js](https://github.com/discordjs/discord.js)  
+[better-sqlite3](https://github.com/JoshuaWise/better-sqlite3)  
+[canvas](https://github.com/Automattic/node-canvas)  
+[cat-ascii-faces](https://github.com/melaniecebula/cat-ascii-faces)  
+[cat-facts](https://github.com/vadimdemedes/cat-facts)  
+[...](https://github.com/kami-blue/bot/blob/b77edef859e942f2fb1257448d794df14e86c0eb/package.json#L12)  
