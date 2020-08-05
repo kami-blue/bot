@@ -27,7 +27,7 @@
     "ytpl": "^0.1.22"
   },
   "repository": {
-    "url": "https://github.com/humboldt123/notdoneyet"
+    "url": "https://github.com/kami-blue/bot"
   },
-  "license": "MIT"
+  "license": "ISC"
 }
