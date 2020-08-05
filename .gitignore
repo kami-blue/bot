@@ -125,3 +125,6 @@ auth.json
 
 # uwucounter
 /data/
+
+#cringe stuff
+*.code-workspace
