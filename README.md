@@ -24,12 +24,12 @@ sudo apt-get install ffmpeg
 
 //on Windows
 npm i -g --add-python-to-path --vs2015 --production windows-build-tools
-(manually install ffpmeg)
+//http://blog.gregzaal.com/how-to-install-ffmpeg-on-windows/
 
 //on MacOS
 xcode-select --install
-(idk how u install ffmpeg here)
-npm i better-sqlite3
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" //if you dont have homebrew installed
+brew install ffmpeg
 ```
 
 `auth.json` example:
