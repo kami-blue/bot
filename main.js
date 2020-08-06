@@ -1,7 +1,5 @@
 // Import AuthFile
 const auth = require("./auth.json");
-const Enmap = require("enmap");
-
 
 const config = {
     prefix: ";",
@@ -50,12 +48,9 @@ client.colors = {
     yellow: "deb63c"
 }
 client.config = config;
-client.uwuCounter = new Enmap({name: "uwuCounter"});
 
 client.on("ready", () => {
     console.log("Bot loaded!");
-    client.uwuCounter.defer;
-    console.log(`${client.uwuCounter.size} uwukeys loaded`);
     const activities_list = ["you skid KAMI", ";help", "help in the #help-en channel"]; // add more then add the type of them below
     const activities_type = ["WATCHING", "LISTENING", "STREAMING"]; // types are PLAYING WATCHING LISTENING and STREAMING
     setInterval(() => {
@@ -76,27 +71,6 @@ client.on("ready", () => {
     
 });
 
-
-/**
- * @module uwuCounter
- * @author sourTaste000
- * Fixed by Humboldt123
- */
-
-
-// uwu-counter.js
-client.on('message', async message => {
-    if(message.content.toLowerCase().includes("uwu") || message.content.toLowerCase().includes("owo")){
-        if (message.author.bot) return;
-        try{
-            client.uwuCounter.get(`${message.author.id}`, "uwuTimes")
-            client.uwuCounter.inc(`${message.author.id}`, "uwuTimes")
-        }catch(err){
-            client.uwuCounter.ensure(`${message.author.id}`, {user: message.author.id, uwuTimes: 1});
-        }
-       
-    }
-});
 
 fs.readdir("./commands/", (err, files) => {
     let jsFiles = files.filter(f => f.split(".").pop() === "js");
