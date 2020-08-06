@@ -17,10 +17,16 @@ node index.js
 Requirements: 
 ```
 node >=12
+git(latest)
+go(latest)
+GNU make(latest)
 
 //on Linux
 sudo apt-get install build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev
 sudo apt-get install ffmpeg
+git clone https://github.com/buildkite/terminal-to-html.git && cd terminal-to-html
+sudo make
+sudo mv ./terminal-to-html /usr/local/bin
 
 //on Windows
 npm i -g --add-python-to-path --vs2015 --production windows-build-tools
@@ -30,6 +36,9 @@ npm i -g --add-python-to-path --vs2015 --production windows-build-tools
 xcode-select --install
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" //if you dont have homebrew installed
 brew install ffmpeg
+git clone https://github.com/buildkite/terminal-to-html.git && cd terminal-to-html
+sudo make
+sudo mv ./terminal-to-html /usr/local/bin
 ```
 
 `auth.json` example:
@@ -43,7 +52,6 @@ brew install ffmpeg
 ## Thank you
 [opus](https://github.com/discordjs/opus)  
 [discord.js](https://github.com/discordjs/discord.js)  
-[better-sqlite3](https://github.com/JoshuaWise/better-sqlite3)  
 [canvas](https://github.com/Automattic/node-canvas)  
 [cat-ascii-faces](https://github.com/melaniecebula/cat-ascii-faces)  
 [cat-facts](https://github.com/vadimdemedes/cat-facts)  

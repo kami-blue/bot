@@ -128,3 +128,5 @@ auth.json
 
 #cringe stuff
 *.code-workspace
+*.html
+nohup.out

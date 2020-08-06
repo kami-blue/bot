@@ -4,4 +4,5 @@ echo "Updating!"
 pkill -9 node
 cd /home/mika/bot
 git pull
-node index.js
+echo "Don't forget to run log.sh"
+nohup node index.js
