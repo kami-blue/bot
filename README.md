@@ -22,23 +22,13 @@ go(latest)
 GNU make(latest)
 
 //on Linux
-sudo apt-get install build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev
-sudo apt-get install ffmpeg
-git clone https://github.com/buildkite/terminal-to-html.git && cd terminal-to-html
-sudo make
-sudo mv ./terminal-to-html /usr/local/bin
+Run the install.sh file.
 
 //on Windows
-npm i -g --add-python-to-path --vs2015 --production windows-build-tools
-//http://blog.gregzaal.com/how-to-install-ffmpeg-on-windows/
+run the install.bat file.
 
 //on MacOS
-xcode-select --install
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" //if you dont have homebrew installed
-brew install ffmpeg
-git clone https://github.com/buildkite/terminal-to-html.git && cd terminal-to-html
-sudo make
-sudo mv ./terminal-to-html /usr/local/bin
+Run the install.tool file.
 ```
 
 `auth.json` example:
