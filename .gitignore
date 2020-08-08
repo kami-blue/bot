@@ -130,3 +130,4 @@ auth.json
 *.code-workspace
 *.html
 nohup.out
+firstRun
