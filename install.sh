@@ -12,12 +12,10 @@ apt-get install build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif
 
 if [ ! -d "$HOME/.local/bin" ]; then
     mkdir "$HOME/.local/bin"
-    # shellcheck disable=SC2164
     git clone https://github.com/buildkite/terminal-to-html.git && cd terminal-to-html
     make
     mv ./terminal-to-html "$HOME/.local/bin"
   else
-    # shellcheck disable=SC2164
     git clone https://github.com/buildkite/terminal-to-html.git && cd terminal-to-html
     make
     mv ./terminal-to-html "$HOME/.local/bin"

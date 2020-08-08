@@ -137,6 +137,17 @@ client.on('messageReactionAdd', async (reaction, user) => {
     }
 });
 
+/**
+ * @module rawPastebin
+ * @author sourTaste000
+ */
+client.on('message', async message => {
+    if(message.content.includes("pastebin.com/")){
+        if (message.author.bot) return;
+        let rawpaste = message.content;
+        message.channel.send(`Raw:\n${rawpaste.replace("pastebin.com/", "pastebin.com/raw/")}`)
+    }
+})
 
 
 
