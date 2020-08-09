@@ -22,7 +22,7 @@
     "opusscript": "^0.0.7",
     "yt-search": "^2.0.2",
     "ytdl-core": "^3.1.2",
-    "ytpl": "^0.1.22"
+    "ytpl": "^0.2.4"
   },
   "repository": {
     "url": "https://github.com/kami-blue/bot"
