@@ -22,13 +22,13 @@ go(latest)
 GNU make(latest)
 
 //on Linux
-Run the install.sh file.
+Run the install.sh file with root.
 
 //on Windows
-run the install.bat file.
+run the install.bat file with root and install https://github.com/buildkite/terminal-to-html manually.
 
 //on MacOS
-Run the install.tool file.
+Run the install.tool file 2 times, with and without root.
 ```
 
 `auth.json` example:
