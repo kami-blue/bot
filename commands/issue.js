@@ -36,6 +36,10 @@ module.exports.run = async (client, message, args) => {
                                 .setColor(client.colors.kamiblue)
                             message.channel.send(pullEmbed)
                         })
+                        .catch((error) => {
+                            message.channel.send("Bad issue number or repository!")
+                            console.error('Error:', error)
+                        })
                 } else {
                     let result = JSON.parse(JSON.stringify(data));
                     let i = 0;
