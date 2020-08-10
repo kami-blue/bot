@@ -2,29 +2,51 @@ const Discord = require("discord.js");
 const fs = require("graceful-fs");
 const fetch = require("node-fetch");
 const auth = require("../auth.json");
-
 /**
  * @author humboldt123
  * Edited by sourTaste000
  * Fixed by humboldt123
  * Updated by sourTaste000 on 8/2/2020
+ * Updated by sourTaste000(again) on 8/10/2020
  */
 
 module.exports.run = async (client, message, args) => {
-    if (!args || !args[0]) return; 
-    try { // declare let below not here, thats now how the let scope works :/
+    if (!args || !args[0]) return;
         fetch(`https://api.github.com/repos/kami-blue/${args[0]}/issues/${args[1]}`, {headers: {Authorization: `token ${auth.githubtoken}`}})
             .then(response => response.json())
             .then(data => {
-                result = JSON.parse(JSON.stringify(data));
-                try {
+                let result = JSON.parse(JSON.stringify(data));
+                if(result.html_url.includes("pull")){
+                    let result = JSON.parse(JSON.stringify(data));
+                    fetch(result.pull_request.url)
+                        .then(response => response.json())
+                        .then(data => {
+                            let result = JSON.parse(JSON.stringify(data));
+                            let pullEmbed = new Discord.MessageEmbed()
+                                .setAuthor("カミブルー！", "https://cdn.discordapp.com/avatars/638403216278683661/1e8bed04cb18e1cb1239e208a01893a1.png", "https://kamiblue.org")
+                                .setTitle(result.title)
+                                .setURL(result.html_url)
+                                .setDescription(result.body)
+                                .setThumbnail(result.user.avatar_url)
+                                .addField("Additions: ", result.additions, true)
+                                .addField("Deletions: ", result.deletions, true)
+                                .addField("Commits:", result.commits, true)
+                                .addField("Changed Files", result.changed_files, true)
+                                .addField("Comments", result.comments, true)
+                                .setColor(client.colors.kamiblue)
+                            message.channel.send(pullEmbed)
+                        })
+                } else {
+                    let result = JSON.parse(JSON.stringify(data));
                     let i = 0;
-                    let j = 0;
-                    let milestone = result.milestone || {"title":"No Milestone"};
-                    let assignee = result.assignee || {"login":"None"};
-                    let labels = result.labels || [{"name":"None"}]; // Such a fucking hack but it looks fancy
+                    let milestone = result.milestone || {"title": "No Milestone"};
+                    let assignee = result.assignee || {"login": "None"};
+                    let labels = result.labels || [{"name": "None"}]; // Such a fucking hack but it looks fancy
+                    let status = result.state;
                     let labels1 = [];
-                    for(i in labels){labels1.push(labels[i].name)}
+                    for (i in labels) {
+                        labels1.push(labels[i].name)
+                    }
                     let issueEmbed = new Discord.MessageEmbed()
                         .setAuthor("カミブルー！", "https://cdn.discordapp.com/avatars/638403216278683661/1e8bed04cb18e1cb1239e208a01893a1.png", "https://kamiblue.org")
                         .setTitle(result.title)
@@ -33,19 +55,17 @@ module.exports.run = async (client, message, args) => {
                         .setDescription(result.body)
                         .addField("Labels", labels1)
                         .addField("Assignee", assignee.login)
+                        .addField("Status", status)
                         .addField("Milestone", milestone.title)
                         .setColor(client.colors.kamiblue)
 
                     message.channel.send(issueEmbed)
-                } catch (e) {
-                    console.log(e);
-                    message.channel.send("Bad issue number or repository!");
                 }
             })
-    } catch (e) {
-        message.channel.send("*Here's the issue!*\nCould not confirm validity of issue\nhttps://github.com/kami-blue/" + args[0] + "/issues/" + args[1]);
-    }
-
+            .catch((error) => {
+                message.channel.send("Bad issue number or repository!");
+                console.error('Error:', error);
+            })
 };
 
 module.exports.config = {
