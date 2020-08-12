@@ -99,7 +99,7 @@ client.on("ready", () => {
      * @since  8/12/2020
      */
     setInterval(() => {
-        fetch("https://api.github.com/repos/kami-blue/nightly-releases/releases", {headers: {Authorization: `token ${auth.githubtoken}`}})
+        fetch("https://api.github.com/repos/kami-blue/client/releases", {headers: {Authorization: `token ${auth.githubtoken}`}})
             .then(response => response.json())
             .then(data => {
                 const final = JSON.parse(JSON.stringify(data));
@@ -109,7 +109,7 @@ client.on("ready", () => {
                     .then(response => response.json())
                     .then(data => {
                         const total = JSON.parse(JSON.stringify(data))
-                        client.channels.cache.get('743240299069046835').setName(`Downloads: ${j*(total.count/30)}`)
+                        client.channels.cache.get('743240299069046835').setName(`${j*(total.count/30)} Downloads`)
                     })
             })
             .catch((error) => {
