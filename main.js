@@ -35,6 +35,8 @@ const config = {
 // Import Modules (for this file)
 const Discord = require("discord.js");
 const fs = require("graceful-fs");
+const convert = require("ms")
+const fetch = require("node-fetch")
 
 // Regexes
 /* bad messages regexes */
@@ -91,7 +93,29 @@ client.on("ready", () => {
     } catch (error) {
         (`${error}\nThis is a developmental version of the bot; as such some commands more integrated with the KAMI Blue Discord will **not** function as intended.`)
     }
-
+    /**
+     * @module DownloadCount
+     * @author sourTaste000
+     * @since  8/12/2020
+     */
+    setInterval(() => {
+        fetch("https://api.github.com/repos/kami-blue/nightly-releases/releases", {headers: {Authorization: `token ${auth.githubtoken}`}})
+            .then(response => response.json())
+            .then(data => {
+                const final = JSON.parse(JSON.stringify(data));
+                let j = 0;
+                for(let i = 0; i <= 29; i++){
+                    j += final[i].assets[0].download_count;
+                    console.log(j);
+                }
+                client.channels.cache.get('743150116516528159').setName(`Downloads: ${j}`)
+                j = 0;
+            })
+            .catch((error) => {
+                console.error("Failed to grab downloads!")
+                console.error('Error:', error)
+            })
+    }, convert('10m'))
 });
 
 
