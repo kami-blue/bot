@@ -87,7 +87,7 @@ client.on("ready", () => {
             }
         });
 
-    }, 60000); // One minute
+    }, convert('1m')); // One minute
     try {
         client.channels.cache.get("699982782515904603").send("Bot has started up!!");
     } catch (error) {
@@ -104,12 +104,7 @@ client.on("ready", () => {
             .then(data => {
                 const final = JSON.parse(JSON.stringify(data));
                 let j = 0;
-                for(let i = 0; i <= 29; i++){
-                    j += final[i].assets[0].download_count;
-                    console.log(j);
-                }
-                client.channels.cache.get('743150116516528159').setName(`Downloads: ${j}`)
-                j = 0;
+                client.channels.cache.get('743150116516528159').setName(`Downloads: ${eval(final[0].assets[0].download_count + (j / 30))}`)
             })
             .catch((error) => {
                 console.error("Failed to grab downloads!")
