@@ -104,7 +104,13 @@ client.on("ready", () => {
             .then(data => {
                 const final = JSON.parse(JSON.stringify(data));
                 let j = 0;
-                client.channels.cache.get('743150116516528159').setName(`Downloads: ${eval(final[0].assets[0].download_count + (j / 30))}`)
+                for(let i = 0; i <= 29; i++){ j += final[i].assets[0].download_count }
+                fetch("https://kamiblue.org/api/v1/totalNightlies.json")
+                    .then(response => response.json())
+                    .then(data => {
+                        const total = JSON.parse(JSON.stringify(data))
+                        client.channels.cache.get('743240299069046835').setName(`Downloads: ${j*(total.count/30)}`)
+                    })
             })
             .catch((error) => {
                 console.error("Failed to grab downloads!")
