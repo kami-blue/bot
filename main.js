@@ -105,7 +105,7 @@ client.on("ready", () => {
                 const nightly = JSON.parse(JSON.stringify(data));
                 let nightlyCount = 0;
                 for(let i = 0; i <= 29; i++){ nightlyCount += nightly[i].assets[0].download_count }
-                fetch("https://api.github.com/repos/kami-blue/nightly-releases/releases", {headers: {Authorization: `token ${auth.githubtoken}`}})
+                fetch("https://api.github.com/repos/kami-blue/client/releases", {headers: {Authorization: `token ${auth.githubtoken}`}})
                     .then(response => response.json())
                     .then(data => {
                         const stable = JSON.parse(JSON.stringify(data));
