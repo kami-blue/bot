@@ -104,24 +104,34 @@ client.on("ready", () => {
             .then(data => {
                 const nightly = JSON.parse(JSON.stringify(data));
                 let nightlyCount = 0;
-                for(let i = 0; i <= 29; i++){ nightlyCount += nightly[i].assets[0].download_count }
+                for (i of nightly) {
+                    nightlyCount += i.assets[0].download_count
+                }
                 fetch("https://api.github.com/repos/kami-blue/client/releases", {headers: {Authorization: `token ${auth.githubtoken}`}})
                     .then(response => response.json())
                     .then(data => {
                         const stable = JSON.parse(JSON.stringify(data));
                         let stableCount = 0;
-                        for(let i = 0; i <= 29; i++){ stableCount += stable[i].assets[0].download_count }
+                        for (j of stable) {
+                            stableCount += j.assets[0].download_count
+                        }
                         fetch("https://kamiblue.org/api/v1/totalNightlies.json")
                             .then(response => response.json())
                             .then(data => {
                                 const total = JSON.parse(JSON.stringify(data))
-                                client.channels.cache.get('743240299069046835').setName(`${nightlyCount*(total.count/30)+stableCount} Downloads`)
+                                client.channels.cache.get('743240299069046835').edit({name: `${Math.ceil(nightlyCount * (total.count / 30) + stableCount)} Downloads`})
                             })
-                    })
-
+                            .catch((error) => {
+                                console.error("Failed to nightly counts!")
+                                console.error('Error:', error)
+                            })
+                    }).catch((error) => {
+                    console.error("Failed to grab stable downloads!")
+                    console.error('Error:', error)
+                })
             })
             .catch((error) => {
-                console.error("Failed to grab downloads!")
+                console.error("Failed to grab nightly downloads!")
                 console.error('Error:', error)
             })
     }, convert('10m'))
