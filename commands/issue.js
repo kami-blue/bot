@@ -47,7 +47,7 @@ module.exports.run = async (client, message, args) => {
                     let assignee = result.assignee || {"login": "None"};
                     let labels = result.labels || [{"name": "None"}]; // Such a fucking hack but it looks fancy
                     let status = result.state;
-                    let labels1 = [];
+                    let labels1 = [] || [{"name": "None"}];
                     for (i in labels) {
                         labels1.push(labels[i].name)
                     }
