@@ -48,7 +48,7 @@ module.exports.run = async (client, message, args) => {
                     let labels = result.labels || [{"name": "None"}]; // Such a fucking hack but it looks fancy
                     let status = result.state;
                     let labels1 = [] || [{"name": "None"}];
-                    for (i in labels) {
+                    for (i of labels) {
                         labels1.push(labels[i].name)
                     }
                     let issueEmbed = new Discord.MessageEmbed()
