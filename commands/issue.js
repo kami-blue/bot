@@ -45,11 +45,15 @@ module.exports.run = async (client, message, args) => {
                     let i = 0;
                     let milestone = result.milestone || {"title": "No Milestone"};
                     let assignee = result.assignee || {"login": "None"};
-                    let labels = result.labels || [{"name": "None"}]; // Such a fucking hack but it looks fancy
+                    let labels = result.labels || {"login": "None"};
                     let status = result.state;
-                    let labels1 = [] || [{"name": "None"}];
-                    for (i of labels) {
-                        labels1.push(labels[i].name)
+                    let labels1 = [];
+                    if(labels == undefined){
+                        for (i of labels) {
+                            labels1.push(labels[i].name)
+                        }
+                    }else{
+                        labels1 = "No Labels"
                     }
                     let issueEmbed = new Discord.MessageEmbed()
                         .setAuthor("カミブルー！", "https://cdn.discordapp.com/avatars/638403216278683661/1e8bed04cb18e1cb1239e208a01893a1.png", "https://kamiblue.org")
