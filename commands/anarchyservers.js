@@ -8,7 +8,7 @@ module.exports.run = async (client, message, args) => {
 
 module.exports.config = {
     name: "anarchyservers",
-    aliases: [serverlists],
+    aliases: ["serverlists"],
     use: "anarchyservers",
     description: "Searches for anarchy servers",
     state: "gamma",
