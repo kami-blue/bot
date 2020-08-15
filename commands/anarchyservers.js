@@ -10,7 +10,7 @@ module.exports.config = {
     name: "anarchyservers",
     aliases: [serverlists],
     use: "anarchyservers",
-    description: "Googles for anarchy servers",
+    description: "Searches for anarchy servers",
     state: "gamma",
     page: 1
 };
