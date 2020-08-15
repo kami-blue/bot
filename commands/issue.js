@@ -48,8 +48,8 @@ module.exports.run = async (client, message, args) => {
                     let labels = result.labels || {"login": "None"};
                     let status = result.state;
                     let labels1 = [];
-                    if(labels == undefined){
-                        for (i of labels) {
+                    if(labels === undefined || isNaN(labels)){
+                        for (i in labels) {
                             labels1.push(labels[i].name)
                         }
                     }else{
