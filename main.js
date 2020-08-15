@@ -234,7 +234,14 @@ client.on('messageUpdate', (oldMessage, newMessage) => {
     if (newMessage.author.bot) return;
     autoResponder(newMessage);
 });
-
+/* @author okk */
+client.on("messageDelete", (msg) => {
+    if(msg.content.startsWith(config.prefix)) {
+        if (!msg.member.hasPermission("CHANGE_NICKNAME")) {
+            msg.channel.send(`Message ${msg.content} by ${msg.author.tag} was deleted.`)
+        }
+    }
+});
 /*
      ___        _         ______
    / _ \      | |        |  ___|
