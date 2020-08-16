@@ -198,7 +198,9 @@ client.on('message', async message => {
  * ( ͡° ͜ʖ ͡°)
  */
 let pinnedMessages = [];
+let cringe = []
 let i = 0;
+let j = 0;
 
 client.on('messageReactionAdd', async (reaction, user) => {
     if (reaction.emoji.toString() === "⭐" && !pinnedMessages.includes(reaction.message.content)) {
@@ -215,9 +217,26 @@ client.on('messageReactionAdd', async (reaction, user) => {
                 .setTimestamp();
             client.channels.cache.get('735680230148276286').send(starEmbed);
             client.channels.cache.get('735680230148276286').send(image);
+            pinnedMessages.push(reaction.message.content)
             i++
         }
-    }
+    } else if(reaction.emoji.toString() === "💩" && !cringe.includes(reaction.message.content)) {
+        client.channels.cache.get('579741237377236992').send(`${user.username} voted for cringe`);
+        if(reaction.count === 3){
+            cringe[j] = reaction.message.content;
+            const cringeImage = reaction.message.attachments.size > 0 ? reaction.message.attachments.array()[0].url : '';
+            const cringeEmbed = new Discord.MessageEmbed()
+                .setAuthor("カミブルー！", "https://cdn.discordapp.com/avatars/638403216278683661/1e8bed04cb18e1cb1239e208a01893a1.png", "https://kamiblue.org")
+                .setDescription(reaction.message.content)
+                .addField("[link]", reaction.message.url, true)
+                .setFooter(reaction.message.author.username, reaction.message.author.avatarURL())
+                .setColor(client.colors.yellow)
+                .setTimestamp();
+            client.channels.cache.get('744353949624041502').send(cringeEmbed);
+            client.channels.cache.get('744353949624041502').send(cringeImage);
+            cringe.push(reaction.message.content)
+            j++
+        }
 });
 
 /* when message is edited */
