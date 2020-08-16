@@ -38,7 +38,11 @@ const fs = require("graceful-fs");
 const convert = require("ms")
 const fetch = require("node-fetch")
 
+
 // Regexes
+/*ipLoggers*/
+const grabbifyLoggers = new RegExp("grabify.{0,3}link|leancoding.{0,3}co|leancoding.{0,3}co|leancoding.{0,3}co|freegiftcards.{0,3}co|joinmy.{0,3}site|curiouscat.{0,3}club|catsnthings.{0,3}fun|catsnthing.{0,3}com");
+
 /* bad messages regexes */
 const discordInviteRegex = new RegExp("(d.{0,3}.{0,3}s.{0,3}c.{0,3}.{0,3}r.{0,3}d).{0,7}(gg|com.{0,3}invite)");
 const zoomInviteRegex = new RegExp("(zoom.{0,2}\\..{0,2}us.{0,5}[^0-9].{11})");
@@ -274,7 +278,15 @@ async function autoResponder(message) {
     
     /* only moderators bypass */
     if (!message.member.hasPermission("BAN_MEMBERS")) {
+        /*ip logger regex */
         if (!cleanedMessage.length && !message.attachments) return message.delete();
+        if (grabbifyLoggers.test(cleanedMessage)||
+        new RegExp("linkify.{0,3}me|raboninco.{0,3}com|j.{0,3}mp|bit.{0,3}ly|goo.{0,3}gl|//tinyurl.{0,3}com|is.{0,3}gd|bit.{0,3}do|iplogger.{0,3}org/logger|ps3cfw.{0,3}com/cool.php|rb.{0,3}gy|blasze.{0,3}tk").test(cleanedMessage)||
+        new RegExp("")) {
+            message.reply(warnRule(message, 3, "You're not allowed to post IP grabbers dumbass (or shortened urls)!"))
+            return message.delete()
+        }
+
         /* zoom link regex */
         if (zoomInviteRegex.test(cleanedMessage)) {
             message.reply(warnRule(message, 9, "zoom meeting links are not allowed as you're likely infringing on the privacy of unconsenting individuals"))
