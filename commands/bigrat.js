@@ -4,7 +4,7 @@ const fs = require("graceful-fs");
 module.exports.run = async (client, message, args) => {
 
     const bigRat = new Discord.messageEmbed()
-    .setColor(BLACK)
+    .setColor(client.colors.kamiblue)
     .setTitle("BIGRAT")
     .setImage("https://bigrat.monster/")
 
