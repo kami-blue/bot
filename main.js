@@ -237,6 +237,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
             cringe.push(reaction.message.content)
             j++
         }
+}
 });
 
 /* when message is edited */
