@@ -4,7 +4,7 @@ const fs = require("graceful-fs");
 module.exports.run = async (client, message, args) => {
 
     message.channel.send(`I will eat you`);
-    return message.delete()
+    message.delete()
 }
 
 module.exports.config = {
