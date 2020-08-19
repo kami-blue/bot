@@ -2,13 +2,8 @@ const Discord = require("discord.js");
 const fs = require("graceful-fs");
 
 module.exports.run = async (client, message, args) => {
-
-    const bigRat = new Discord.messageEmbed()
-    .setColor(client.colors.kamiblue)
-    .setTitle("BIGRAT")
-    .setImage("https://bigrat.monster/")
-
-    message.channel.send(bigRat)
+    
+    message.channel.send("https://bigrat.monster/")
 }
 
 module.exports.config = {
