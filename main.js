@@ -29,7 +29,7 @@ const config = {
             "emoji": "🎵"
         }
     ],
-    "dj_role": "🎵 Javascript Music"
+    "dj_role": "Music"
 }
 
 // Import Modules (for this file)
