@@ -3,7 +3,7 @@ const fs = require("graceful-fs");
 
 module.exports.run = async (client, message, args) => {
     message.channel.send(`Google: https://www.google.com/search?&q=anarchy+servers \n
-                          DuckDuckGo: https://duckduckgo.com/?q=anarchy+servers`);
+DuckDuckGo: https://duckduckgo.com/?q=anarchy+servers`);
 }
 
 module.exports.config = {
