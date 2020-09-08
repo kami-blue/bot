@@ -1,5 +1,6 @@
-# The KAMI Blue Discord bot.
-
+# The Javascript KAMI Blue Discord bot.
+**This project is no longer being updated. Please see [bot-kt](https://github.com/kami-blue/bot-kt)**
+___
 [![Discord Mine](https://img.shields.io/discord/573954110454366214?label=chat&logo=discord&logoColor=white)](https://discord.gg/KfpqwZB)
 [![Paypal](https://img.shields.io/badge/paypal-donate-red?color=169bd7&logo=paypal)](https://paypal.me/mik4a/5USD)
 [![BTC](https://img.shields.io/badge/btc-clickme-red?color=f08b16&logo=bitcoin)](https://www.blockchain.com/btc/address/19pH4aNZZMPJkqQ2826BauRokyBs1NYon7)
