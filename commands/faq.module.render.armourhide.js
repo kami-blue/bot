@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/armourhide",
     description: "What is ArmourHide?",
-    page: 6                                       
+    page: -1                                     
 };

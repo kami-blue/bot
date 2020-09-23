@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/commandconfig",
     description: "What is CommandsConfig?",
     state: "gamma",
-    page: 6
+    page: -1
 };

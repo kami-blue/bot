@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/entityspeed",
     description: "What is EntitySpeed?",
-    page: 6                                       
+    page: -1                                       
 };

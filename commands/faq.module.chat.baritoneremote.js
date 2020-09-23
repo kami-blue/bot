@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/baritoneremote",
     description: "What is BaritoneRemote?",
     state: "gamma",
-    page: 6
+    page: -1
 };

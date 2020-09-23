@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/yawlock",
     description: "What is YawLock?",
-    page: 6                                       
+    page: -1                                       
 };

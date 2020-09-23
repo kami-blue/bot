@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/autofeetplace",
     description: "What is AutoFeetPlace?",
     state: "gamma",
-    page: 6
+    page: -1
 };

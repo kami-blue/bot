@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/autofish",
     description: "What is AutoFish?",
     state: "gamma",
-    page: 6
+    page: -1
 };

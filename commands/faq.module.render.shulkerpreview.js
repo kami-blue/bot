@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/shulkerpreview",
     description: "What is ShulkerPreview?",
-    page: 6                                       
+    page: -1                                       
 };

@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/antifriendhit",
     description: "What is AntiFriendHit?",
     state: "gamma",
-    page: 6
+    page: -1
 };

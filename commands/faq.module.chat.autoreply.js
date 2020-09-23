@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/autoreply",
     description: "What is AutoReply?",
     state: "gamma",
-    page: 6
+    page: -1
 };

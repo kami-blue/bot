@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/timer",
     description: "What is Timer?",
-    page: 6                                       
+    page: -1                                       
 };

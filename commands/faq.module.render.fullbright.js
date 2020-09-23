@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/fullbright",
     description: "What is FullBright?",
-    page: 6                                       
+    page: -1                                       
 };

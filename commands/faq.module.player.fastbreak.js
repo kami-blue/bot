@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/fastbreak",
     description: "What is FastBreak?",
-    page: 6                                       
+    page: -1                                       
 };

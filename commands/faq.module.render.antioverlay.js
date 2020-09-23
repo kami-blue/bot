@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/antioverlay",
     description: "What is AntiOverlay?",
-    page: 6                                       
+    page: -1                                      
 };

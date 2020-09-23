@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/chattimestamp",
     description: "What is ChatTimeStamp?",
     state: "gamma",
-    page: 6
+    page: -1
 };

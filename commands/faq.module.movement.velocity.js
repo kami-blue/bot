@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/velocity",
     description: "What is Velocity?",
-    page: 6                                       
+    page: -1                                      
 };

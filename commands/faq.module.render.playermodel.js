@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/playermodel",
     description: "What is PlayerModel?",
-    page: 6                                       
+    page: -1                                       
 };

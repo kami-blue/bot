@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/autoexcuse",
     description: "What is AutoExcuse?",
     state: "gamma",
-    page: 6
+    page: -1
 };

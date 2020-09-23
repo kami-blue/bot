@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/zoom",
     description: "What is Zoom?",
-    page: 6                                       
+    page: -1                                    
 };

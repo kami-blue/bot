@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/blink",
     description: "What is Blink?",
-    page: 6                                       
+    page: -1                                       
 };

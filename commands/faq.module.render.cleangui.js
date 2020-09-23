@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/cleangui",
     description: "What is CleanGUI?",
-    page: 6                                       
+    page: -1                                       
 };

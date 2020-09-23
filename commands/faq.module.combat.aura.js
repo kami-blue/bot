@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/aura",
     description: "What is Aura?",
     state: "gamma",
-    page: 6
+    page: -1
 };

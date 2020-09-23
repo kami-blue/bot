@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/antidisconnect",
     description: "What is AntiDisconnect?",
     state: "gamma",
-    page: 6
+    page: -1
 };

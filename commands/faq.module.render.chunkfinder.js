@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/chunkfinder",
     description: "What is ChunkFinder?",
-    page: 6                                       
+    page: -1                                       
 };

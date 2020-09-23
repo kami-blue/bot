@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/breadcrumbs",
     description: "What is Breadcrumbs?",
-    page: 6                                       
+    page: -1                                       
 };

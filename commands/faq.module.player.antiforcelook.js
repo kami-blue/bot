@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/antiforcelook",
     description: "What is AntiForceLook?",
-    page: 6                                       
+    page: -1                                      
 };

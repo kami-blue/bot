@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/autoobsidian",
     description: "What is AutoObsidian?",
     state: "gamma",
-    page: 6
+    page: -1
 };

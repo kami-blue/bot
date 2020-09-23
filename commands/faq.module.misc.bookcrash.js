@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/bookcrash",
     description: "What is BookCrash?",
-    page: 6
+    page: -1
 };

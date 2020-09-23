@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/autolog",
     description: "What is AutoLog?",
     state: "gamma",
-    page: 6
+    page: -1
 };

@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/safewalk",
     description: "What is SafeWalk?",
-    page: 6                                       
+    page: -1                                       
 };

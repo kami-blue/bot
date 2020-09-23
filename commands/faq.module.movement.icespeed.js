@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/icespeed",
     description: "What is IceSpeed?",
-    page: 6                                       
+    page: -1                                       
 };

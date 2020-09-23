@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/autotrap",
     description: "What is AutoTrap?",
     state: "gamma",
-    page: 6
+    page: -1
 };

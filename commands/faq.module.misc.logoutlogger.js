@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/logoutlogger",
     description: "What is LogoutLogger?",
-    page: 6
+    page: -1
 };

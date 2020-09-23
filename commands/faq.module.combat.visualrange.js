@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/visualrange",
     description: "What is VisualRange?",
     state: "gamma",
-    page: 6
+    page: -1
 };

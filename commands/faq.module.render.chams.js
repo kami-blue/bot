@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/chams",
     description: "What is Chams?",
-    page: 6                                       
+    page: -1                                       
 };

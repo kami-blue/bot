@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/antibookkick",
     description: "What is AntiBookKick?",
     state: "gamma",
-    page: 6
+    page: -1
 };

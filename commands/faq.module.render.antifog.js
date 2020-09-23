@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/antifog",
     description: "What is AntiFog?",
-    page: 6                                       
+    page: -1                                       
 };

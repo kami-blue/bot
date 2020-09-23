@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/portalgodmode",
     description: "What is PortalGodMode?",
-    page: 6                                       
+    page: -1                                       
 };

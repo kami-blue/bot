@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/noentitytrace",
     description: "What is NoEntityTrace?",
-    page: 6                                       
+    page: -1                                       
 };

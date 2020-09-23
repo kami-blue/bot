@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/autoremount",
     description: "What is AutoRemount?",
-    page: 6                                       
+    page: -1                                       
 };

@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/autotpa",
     description: "What is AutoTPA?",
     state: "gamma",
-    page: 6
+    page: -1
 };

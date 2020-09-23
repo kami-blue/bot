@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/mountbypass",
     description: "What is MountBypass?",
-    page: 6
+    page: -1
 };

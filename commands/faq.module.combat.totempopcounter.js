@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/totempopcounter",
     description: "What is TotemPopCounter?",
     state: "gamma",
-    page: 6
+    page: -1
 };

@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/antilevitation",
     description: "What is AntiLevitation?",
-    page: 6                                       
+    page: -1                                       
 };

@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/antiafk",
     description: "What is AntiAFK?",
     state: "gamma",
-    page: 6
+    page: -1
 };

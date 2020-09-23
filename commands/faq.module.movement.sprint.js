@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/sprint",
     description: "What is Sprint?",
-    page: 6                                       
+    page: -1                                       
 };

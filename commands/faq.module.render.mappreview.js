@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/mappreview",
     description: "What is MapPreview?",
-    page: 6                                       
+    page: -1                                       
 };

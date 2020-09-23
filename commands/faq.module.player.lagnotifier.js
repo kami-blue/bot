@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/lagnotifier",
     description: "What is LagNotifier?",
-    page: 6                                       
+    page: -1                                       
 };

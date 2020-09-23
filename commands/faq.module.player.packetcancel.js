@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/packetcancel",
     description: "What is PacketCancel?",
-    page: 6                                       
+    page: -1                                       
 };

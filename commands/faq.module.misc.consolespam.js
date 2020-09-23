@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/consolespam",
     description: "What is ConsoleSpam?",
-    page: 6
+    page: -1
 };

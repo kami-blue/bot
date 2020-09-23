@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/crystalaura",
     description: "What is CrystalAura?",
     state: "gamma",
-    page: 6
+    page: -1
 };

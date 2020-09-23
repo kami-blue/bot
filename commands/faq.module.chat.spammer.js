@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/spammer",
     description: "What is Spammer?",
     state: "gamma",
-    page: 6
+    page: -1
 };

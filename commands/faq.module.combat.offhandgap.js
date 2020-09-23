@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/offhandgap",
     description: "What is OffHandGap?",
     state: "gamma",
-    page: 6
+    page: -1
 };

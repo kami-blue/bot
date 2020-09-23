@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/autotunnel",
     description: "What is AutoTunnel?",
     state: "gamma",
-    page: 6
+    page: -1
 };

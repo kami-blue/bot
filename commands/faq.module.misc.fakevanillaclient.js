@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/fakevanillaclient",
     description: "What is FakeVanillaClient?",
-    page: 6
+    page: -1
 };

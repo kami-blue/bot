@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/freecam",
     description: "What is Freecam?",
-    page: 6                                       
+    page: -1                                       
 };

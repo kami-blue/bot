@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/search",
     description: "What is Search?",
-    page: 6                                       
+    page: -1                                       
 };

@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/liquidinteract",
     description: "What is LiquidInteract?",
-    page: 6                                       
+    page: -1                                       
 };

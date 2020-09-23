@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/surround",
     description: "What is Surround?",
     state: "gamma",
-    page: 6
+    page: -1
 };

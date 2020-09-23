@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/extratab",
     description: "What is ExtraTab?",
-    page: 6                                       
+    page: -1                                       
 };

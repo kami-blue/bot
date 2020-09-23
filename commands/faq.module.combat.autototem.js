@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/autototem",
     description: "What is AutoTotem?",
     state: "gamma",
-    page: 6
+    page: -1
 };

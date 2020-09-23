@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/chatfilter",
     description: "What is ChatFilter?",
     state: "gamma",
-    page: 6
+    page: -1
 };

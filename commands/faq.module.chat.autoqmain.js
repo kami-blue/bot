@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/autoqmain",
     description: "What is AutoQMain?",
     state: "gamma",
-    page: 6
+    page: -1
 };

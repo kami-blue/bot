@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/flight",
     description: "What is Flight?",
-    page: 6                                       
+    page: -1                                       
 };

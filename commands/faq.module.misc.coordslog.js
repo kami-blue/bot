@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/cooordslog",
     description: "What is CoordsLog?",
-    page: 6
+    page: -1
 };

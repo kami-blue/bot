@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/xcarry",
     description: "What is XCarry?",
-    page: 6                                       
+    page: -1                                      
 };

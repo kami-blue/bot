@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/elytraflight",
     description: "What is ElytraFlight?",
-    page: 6                                       
+    page: -1                                       
 };

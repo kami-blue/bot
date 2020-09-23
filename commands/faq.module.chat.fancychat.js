@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/fancychat",
     description: "What is FancyChat?",
     state: "gamma",
-    page: 6
+    page: -1
 };

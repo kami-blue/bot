@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/autojump",
     description: "What is AutoJump?",
-    page: 6                                       
+    page: -1                                       
 };

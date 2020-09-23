@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/xray",
     description: "What is XRay?",
-    page: 6                                       
+    page: -1                                    
 };

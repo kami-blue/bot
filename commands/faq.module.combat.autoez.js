@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/autoez",
     description: "What is AutoEZ?",
     state: "gamma",
-    page: 6
+    page: -1
 };

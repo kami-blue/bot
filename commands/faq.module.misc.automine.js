@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/automine",
     description: "What is AutoMine?",
     state: "gamma",
-    page: 6
+    page: -1
 };

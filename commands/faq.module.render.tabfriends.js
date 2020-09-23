@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/tabfriends",
     description: "What is TabFriends?",
-    page: 6                                       
+    page: -1                                       
 };

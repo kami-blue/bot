@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/noswing",
     description: "What is NoSwing?",
-    page: 6                                       
+    page: -1                                       
 };

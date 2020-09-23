@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/criticals",
     description: "What is Criticals?",
     state: "gamma",
-    page: 6
+    page: -1
 };

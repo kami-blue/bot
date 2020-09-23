@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/pitchlock",
     description: "What is PitchLock?",
-    page: 6                                       
+    page: -1                                       
 };

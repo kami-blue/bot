@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/portalchat",
     description: "What is PortalChat?",
     state: "gamma",
-    page: 6
+    page: -1
 };

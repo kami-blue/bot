@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/nofall",
     description: "What is NoFall?",
-    page: 6                                       
+    page: -1                                     
 };

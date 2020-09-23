@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/discordrpc",
     description: "What is DiscordRPC?",
-    page: 6
+    page: -1
 };

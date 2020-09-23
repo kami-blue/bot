@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/endteleport",
     description: "What is EndTeleport?",
-    page: 6                                       
+    page: -1                                      
 };

@@ -20,10 +20,10 @@ module.exports.run = async (client, message, args) => {
 };
 
 module.exports.config = {
-    name: "faq/antispam",
+    name: "faq/*module_name*",
     aliases: [],
-    use: "faq/antispam",
-    description: "What is AntiSpam?",
+    use: "faq/*module_name*",
+    description: "FAQ about modules",
     state: "gamma",
-    page: 6
+    page: 2
 };

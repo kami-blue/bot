@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/inventorymove",
     description: "What is InventoryMove?",
-    page: 6                                       
+    page: -1                                       
 };

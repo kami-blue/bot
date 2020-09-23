@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/step",
     description: "What is Step?",
-    page: 6                                       
+    page: -1                                       
 };

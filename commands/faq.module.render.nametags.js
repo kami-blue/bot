@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/nametags",
     description: "What is Nametags?",
-    page: 6                                       
+    page: -1                                       
 };

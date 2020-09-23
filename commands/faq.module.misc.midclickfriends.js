@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/midclickfriends",
     description: "What is MidClickFriends?",
-    page: 6
+    page: -1
 };

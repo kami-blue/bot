@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/formatchat",
     description: "What is FormatChat?",
     state: "gamma",
-    page: 6
+    page: -1
 };

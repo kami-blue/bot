@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/antiweather",
     description: "What is AntiWeather?",
     state: "gamma",
-    page: 6
+    page: -1
 };

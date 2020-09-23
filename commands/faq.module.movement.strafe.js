@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/strafe",
     description: "What is Strafe?",
-    page: 6                                       
+    page: -1                                       
 };

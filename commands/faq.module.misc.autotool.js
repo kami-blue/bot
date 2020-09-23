@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/autotool",
     description: "What is AutoTool?",
     state: "gamma",
-    page: 6
+    page: -1
 };

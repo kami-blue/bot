@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/coloursign",
     description: "What is ColourSign?",
-    page: 6
+    page: -1
 };

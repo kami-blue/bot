@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/friendhighlight",
     description: "What is FriendHighlight?",
     state: "gamma",
-    page: 6
+    page: -1
 };

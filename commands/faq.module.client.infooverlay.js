@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/infooverlay",
     description: "What is InfoOverlay?",
     state: "gamma",
-    page: 6
+    page: -1
 };

@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/hungeroverlay",
     description: "What is HungerOverlay?",
-    page: 6                                       
+    page: -1                                       
 };

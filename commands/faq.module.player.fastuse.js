@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/fastuse",
     description: "What is FastUse?",
-    page: 6                                       
+    page: -1                                      
 };

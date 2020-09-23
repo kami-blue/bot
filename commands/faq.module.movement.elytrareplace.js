@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/elytrareplace",
     description: "What is ElytraReplace?",
-    page: 6                                       
+    page: -1                                       
 };

@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/customchat",
     description: "What is CustomChat?",
     state: "gamma",
-    page: 6
+    page: -1
 };

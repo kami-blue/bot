@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/nopacketkick",
     description: "What is NoPacketKick?",
-    page: 6                                       
+    page: -1                                      
 };

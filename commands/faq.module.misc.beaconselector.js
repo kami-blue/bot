@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/beaconselector",
     description: "What is BeaconSelector?",
     state: "gamma",
-    page: 6
+    page: -1
 };

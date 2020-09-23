@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/antihunger",
     description: "What is AntiHunger?",
-    page: 6                                       
+    page: -1                                      
 };

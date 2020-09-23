@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/kamimoji",
     description: "What is KamiMoji?",
     state: "gamma",
-    page: 6
+    page: -1
 };

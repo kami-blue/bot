@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/nobreakanimation",
     description: "What is NoBreakAnimation?",
-    page: 6                                       
+    page: -1                                       
 };

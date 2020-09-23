@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/capes",
     description: "What is Capes?",
     state: "gamma",
-    page: 6
+    page: -1
 };

@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/tooltips",
     description: "What is Tooltips?",
     state: "gamma",
-    page: 6
+    page: -1
 };

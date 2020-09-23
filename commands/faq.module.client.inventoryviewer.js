@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/inventoryviewer",
     description: "What is InventoryViewer?",
     state: "gamma",
-    page: 6
+    page: -1
 };

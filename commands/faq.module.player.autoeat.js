@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/autoeat",
     description: "What is AutoEat?",
-    page: 6                                       
+    page: -1                                       
 };

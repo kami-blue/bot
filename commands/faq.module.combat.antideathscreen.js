@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/antideathscreen",
     description: "What is AntiDeathScreen?",
     state: "gamma",
-    page: 6
+    page: -1
 };

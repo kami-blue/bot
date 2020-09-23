@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/autoarmour",
     description: "What is AutoArmour?",
-    page: 6                                       
+    page: -1                                      
 };

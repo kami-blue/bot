@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/autospawner",
     description: "What is AutoSpawner?",
     state: "gamma",
-    page: 6
+    page: -1
 };

@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/holeesp",
     description: "What is HoleESP?",
-    page: 6                                       
+    page: -1                                       
 };

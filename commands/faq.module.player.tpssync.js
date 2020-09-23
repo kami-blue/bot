@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/tpssync",
     description: "What is TpsSync?",
-    page: 6                                       
+    page: -1                                       
 };

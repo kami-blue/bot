@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/aimbot",
     description: "What is AimBot?",
     state: "gamma",
-    page: 6
+    page: -1
 };

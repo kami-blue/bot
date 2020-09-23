@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/activemodules",
     description: "What is ActiveModules?",
     state: "gamma",
-    page: 6
+    page: -1
 };

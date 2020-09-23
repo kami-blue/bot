@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/eyefinder",
     description: "What is EyeFinder?",
-    page: 6                                       
+    page: -1                                       
 };

@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/blockdata",
     description: "What is BlockData?",
     state: "gamma",
-    page: 6
+    page: -1
 };

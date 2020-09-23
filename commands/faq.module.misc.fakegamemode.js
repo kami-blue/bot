@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/fakegamemode",
     description: "What is FakeGamemode?",
-    page: 6
+    page: -1
 };

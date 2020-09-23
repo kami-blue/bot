@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/cameraclip",
     description: "What is CameraClip?",
-    page: 6                                       
+    page: -1                                       
 };

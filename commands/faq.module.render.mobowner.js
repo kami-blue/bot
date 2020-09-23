@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/mobowner",
     description: "What is MobOwner?",
-    page: 6                                       
+    page: -1                                       
 };

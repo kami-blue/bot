@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/autonametag",
     description: "What is AutoNameTag?",
     state: "gamma",
-    page: 6
+    page: -1
 };

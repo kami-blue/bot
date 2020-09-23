@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/timerspeed",
     description: "What is TimerSpeed?",
-    page: 6                                       
+    page: -1                                       
 };

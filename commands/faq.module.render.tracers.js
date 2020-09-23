@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/tracers",
     description: "What is Tracers?",
-    page: 6                                       
+    page: -1                                       
 };

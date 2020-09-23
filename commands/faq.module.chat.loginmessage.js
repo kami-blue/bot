@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/loginmessage",
     description: "What is LoginMessage?",
     state: "gamma",
-    page: 6
+    page: -1
 };

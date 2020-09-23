@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/nohurtcam",
     description: "What is NoHurtCam?",
-    page: 6                                       
+    page: -1                                       
 };

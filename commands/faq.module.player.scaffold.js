@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/scaffold",
     description: "What is Scaffold?",
-    page: 6                                       
+    page: -1                                       
 };

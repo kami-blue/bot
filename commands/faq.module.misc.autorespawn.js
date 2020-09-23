@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/autorespawn",
     description: "What is AutoRespawn?",
     state: "gamma",
-    page: 6
+    page: -1
 };

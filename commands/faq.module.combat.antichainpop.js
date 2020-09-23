@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/antichainpop",
     description: "What is AntiChainPop?",
     state: "gamma",
-    page: 6
+    page: -1
 };

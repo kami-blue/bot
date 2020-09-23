@@ -24,5 +24,5 @@ module.exports.config = {
     aliases: [],
     use: "faq/entitytool",
     description: "What is EntityTool?",
-    page: 6
+    page: -1
 };

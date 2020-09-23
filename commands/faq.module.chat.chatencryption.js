@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/chatencryption",
     description: "What is ChatEncryption?",
     state: "gamma",
-    page: 6
+    page: -1
 };

@@ -25,5 +25,5 @@ module.exports.config = {
     use: "faq/autoreconnect",
     description: "What is AutoReconnect?",
     state: "gamma",
-    page: 6
+    page: -1
 };
