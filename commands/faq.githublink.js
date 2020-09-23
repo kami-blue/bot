@@ -9,7 +9,7 @@ module.exports.run = async (client, message, args) => {
         message.channel.send(githublinkRU)
     } else {
         let githublinkEN = new Discord.MessageEmbed()
-        .setTitle(`[ Official repositories KAMI Blue ](https://github.com/kami-blue)`)
+        .setTitle(`[Official repositories KAMI Blue](https://github.com/kami-blue)`)
         .setColor(client.colors.kamiblue)
         message.channel.send(githublinkEN)
     }
