@@ -27,6 +27,10 @@ const config = {
         {
             "name": "Music Commands",
             "emoji": "🎵"
+        },
+        {
+            "name": "Modules",
+            "emoji": ":jigsaw:"
         }
     ],
     "dj_role": "Music"
