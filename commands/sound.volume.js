@@ -14,7 +14,7 @@ module.exports.run = async (client, message, args) => {
   const serverQueue = client.queue.get(message.guild.id)
   if (!serverQueue || !serverQueue.songs) return message.channel.send("`❌` I am not currently playing music.")
   if (!args[0]) return message.channel.send("`🔊` The volume is now " +  serverQueue.volume);
-  const volume = parseInt(args[0])
+  const volume = if(parseInt(args[0]) >= 200) 200 else parseInt(args[0])
   serverQueue.volume = volume;
   serverQueue.connection.dispatcher.setVolumeLogarithmic(volume / 250);
   return message.channel.send("`🔊` The volume is now " +  volume);
