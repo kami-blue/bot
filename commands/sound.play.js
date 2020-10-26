@@ -45,9 +45,7 @@ module.exports.run = async (client, message, args) => {
                         const videoIndex = parseInt(response.first().content);
                         video = await ytdl.getBasicInfo(videos[videoIndex - 1].videoId);
                     } catch (e) {
-                        message.channel.send("`❌` An unknown error occoured upon trying to join the voice channel!");
-                        message.channel.send(e)
-                        return e
+                        return message.channel.send("`❌` An unknown error occoured upon trying to join the voice channel!");
                     }
                     
                    
