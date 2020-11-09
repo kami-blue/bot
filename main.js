@@ -197,7 +197,8 @@ client.on('message', async message => {
     if (/cursedballs/.test(message.content)) message.delete()
 
     if (/ٴ/.test(message.content)) message.delete()
-
+    
+    if(/https:\/\/merch\.bigrat\.monster\/a/.test(message.content)) message.delete()
 });
 
 /**
