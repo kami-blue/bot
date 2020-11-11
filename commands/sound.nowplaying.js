@@ -13,7 +13,10 @@ module.exports.run = async (client, message, args) => {
 
   const serverQueue = client.queue.get(message.guild.id)
   if (!serverQueue) return message.channel.send("`❌` I am not currently playing music.")
-  
+
+  const { channel } = message.member.voice;
+  if (serverQueue && channel !== message.guild.me.voice.channel) return message.channel.send(` \`❌\` You must be in the same voice channel as the bot to use this command!`).catch(console.error);
+
   var vl = ["○────", "─○───", "──○──", "───○─", "────○"];
   let volumeValue = (vl[(Math.round(serverQueue.volume / 20)) - 1])
   if (!volumeValue) volumeValue = "Kami Blue Music Music";

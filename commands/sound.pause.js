@@ -13,7 +13,10 @@ module.exports.run = async (client, message, args) => {
 
     const serverQueue = client.queue.get(message.guild.id)
     if (!serverQueue) return message.channel.send("`❌` I am not currently playing music.")
-    serverQueue.playing = false
+
+    const { channel } = message.member.voice;
+    if (serverQueue && channel !== message.guild.me.voice.channel) return message.channel.send(` \`❌\` You must be in the same voice channel as the bot to use this command!`).catch(console.error);
+  serverQueue.playing = false
     serverQueue.connection.dispatcher.pause()
     return message.channel.send("`⏸`Music Paused!")
 } 

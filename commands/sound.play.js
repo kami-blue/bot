@@ -18,7 +18,6 @@ module.exports.run = async (client, message, args) => {
     if (!message.member.roles.cache.find(role => config["dj_role"] === role.name)) return message.channel.send("You do not have permissions to use music.");
     if (!message.member.voice.channel) return message.channel.send("You are not in a voice channel.")
 
-
     const url = args.join(" ")
     if (url.includes("list=")) {
         const playlist = await ytpl(url.split("list=")[1]);
@@ -126,7 +125,7 @@ async function playSong(guild, song, message, client) {
     }
     serverQueue.connection.play(await ytdl(song.id), { type: 'opus'})
         .once('finish', reason => {
-            serverQueue.songs.shift();
+            if(!serverQueue.loop) serverQueue.songs.shift();
             playSong(guild, serverQueue.songs[0], message, client, { type: 'opus'});
         })
         .on("error", console.error)

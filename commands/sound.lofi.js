@@ -58,10 +58,10 @@ async function queueSong(video, message, voiceChannel, client) {
             const connection = await voiceChannel.join();
             queueConstruct.connection = connection;
             client.queue.set(message.guild.id, queueConstruct)
-            playSong(message.guild, queueConstruct.songs[0], message, client)
+            playSong(await message.guild, queueConstruct.songs[0], message, client, { type: 'opus'})
         } catch (e) {
             console.log(e)
-            message.channel.send("An unknown error occoured upon trying to join the voice channel!")
+            message.channel.send("An unknown error occurred upon trying to join the voice channel!")
             return queue.delete(message.guild.id)
         }
     } else serverQueue.songs.push(song);
@@ -77,10 +77,10 @@ async function playSong(guild, song, message, client) {
         client.queue.delete(guild.id);
         return;
     }
-    serverQueue.connection.play(ytdl(song.id))
+    serverQueue.connection.play(await ytdl(song.id), { type: 'opus'})
         .once('finish', reason => {
             serverQueue.songs.shift();
-            playSong(guild, serverQueue.songs[0], message, client)
+            playSong(guild, serverQueue.songs[0], message, client, { type: 'opus'})
         })
         .on("error", console.error)
         .setVolumeLogarithmic(serverQueue.volume / 250)
