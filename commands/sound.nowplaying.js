@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const fs = require("graceful-fs");
-const ytdl = require("ytdl-core"),
+const ytdl = require("ytdl-core-discord"),
     ytpl = require("ytpl"),
     ytsearch = require("yt-search"),
     { Util } = require("discord.js");

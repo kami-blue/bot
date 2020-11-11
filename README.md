@@ -48,7 +48,6 @@ brew install ffmpeg
 [Thunderhead](https://github.com/humboldt123/the-thunderhead)  
 [opus](https://github.com/discordjs/opus)  
 [discord.js](https://github.com/discordjs/discord.js)  
-[better-sqlite3](https://github.com/JoshuaWise/better-sqlite3)  
 [canvas](https://github.com/Automattic/node-canvas)  
 [cat-ascii-faces](https://github.com/melaniecebula/cat-ascii-faces)  
 [cat-facts](https://github.com/vadimdemedes/cat-facts)  
