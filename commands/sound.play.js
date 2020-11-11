@@ -125,7 +125,9 @@ async function playSong(guild, song, message, client) {
     }
     serverQueue.connection.play(await ytdl(song.id), { type: 'opus'})
         .once('finish', reason => {
+      
             if(!serverQueue.loop) serverQueue.songs.shift();
+
             playSong(guild, serverQueue.songs[0], message, client, { type: 'opus'});
         })
         .on("error", console.error)
