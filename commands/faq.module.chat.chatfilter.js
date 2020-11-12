@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
     if ((message.channel.id == "724349410858893372") || (message.channel.id == "722436626248237076")) {
         let FaqChatFilterRu = new Discord.MessageEmbed()
         .setTitle("ChatFilter")
-        .setDescription("\n**Категория**: Chat\n**Описание**: Фильтрует кастомные слова или фразы из чата")
+        .setDescription("\n**Категория**: Chat\n**Описание**: Убирает выбранные слова или фразы из чата")
         .setColor(client.colors.kamiblue)
         .setFooter("カミブルー！", client.user.avatarURL())
         message.channel.send(FaqChatFilterRu)

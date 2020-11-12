@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
     if ((message.channel.id == "724349410858893372") || (message.channel.id == "722436626248237076")) {
         let FaqSkinFlickerRu = new Discord.MessageEmbed()
         .setTitle("SkinFlicker")
-        .setDescription("\n**Категория**: Misc\n**Описание**: Единицы хранения бревен на расстоянии отрисовки")
+        .setDescription("\n**Категория**: Misc\n**Описание**: Быстро переключает слои скина для создания крутого эффекта")
         .setColor(client.colors.kamiblue)
         .setFooter("カミブルー！", client.user.avatarURL())
         message.channel.send(FaqSkinFlickerRu)

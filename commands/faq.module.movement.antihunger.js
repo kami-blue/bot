@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
     if ((message.channel.id == "724349410858893372") || (message.channel.id == "722436626248237076")) {
         let FaqAntiHungerRu = new Discord.MessageEmbed()
         .setTitle("TeleportLogger")
-        .setDescription("\n**Категория**: Movement\n**Описание**: Снижает чувство голода при движении")
+        .setDescription("\n**Категория**: Movement\n**Описание**: Снижает потерю голода при движении")
         .setColor(client.colors.kamiblue)
         .setFooter("カミブルー！", client.user.avatarURL())
         message.channel.send(FaqAntiHungerRu)

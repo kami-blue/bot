@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
     if ((message.channel.id == "724349410858893372") || (message.channel.id == "722436626248237076")) {
         let FaqFullBrightRu = new Discord.MessageEmbed()
         .setTitle("FullBright")
-        .setDescription("\n**Категория**: Render\n**Описание**: Делает все светлее!")
+        .setDescription("\n**Категория**: Render\n**Описание**: Делает всё светлее!")
         .setColor(client.colors.kamiblue)
         .setFooter("カミブルー！", client.user.avatarURL())
         message.channel.send(FaqFullBrightRu)

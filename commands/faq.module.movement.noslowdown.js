@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
     if ((message.channel.id == "724349410858893372") || (message.channel.id == "722436626248237076")) {
         let FaqNoSlowDownRu = new Discord.MessageEmbed()
         .setTitle("NoSlowDown")
-        .setDescription("\n**Категория**: Movement\n**Описание**: Предотвращает замедление при использовании предмета или прохождении паутины")
+        .setDescription("\n**Категория**: Movement\n**Описание**: Предотвращает замедление при использовании предмета или прохождении через паутину")
         .setColor(client.colors.kamiblue)
         .setFooter("カミブルー！", client.user.avatarURL())
         message.channel.send(FaqNoSlowDownRu)

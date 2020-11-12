@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
     if ((message.channel.id == "724349410858893372") || (message.channel.id == "722436626248237076")) {
         let FaqMidClickFriendsRu = new Discord.MessageEmbed()
         .setTitle("MidClickFriends")
-        .setDescription("\n**Категория**: Misc\n**Описание**: Щелкнуть средней кнопкой мыши, чтобы добавить в друзья или удалить из друзей")
+        .setDescription("\n**Категория**: Misc\n**Описание**: Кликайте средней кнопкой мыши на игроков, чтобы добавить в друзья или удалить из друзей")
         .setColor(client.colors.kamiblue)
         .setFooter("カミブルー！", client.user.avatarURL())
         message.channel.send(FaqMidClickFriendsRu)

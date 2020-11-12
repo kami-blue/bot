@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
     if ((message.channel.id == "724349410858893372") || (message.channel.id == "722436626248237076")) {
         let FaqAntiSpamEmbedRu = new Discord.MessageEmbed()
         .setTitle("AntiSpam")
-        .setDescription("\n**Категория**: Chat\n**Описание**: Автоматическое удаление рекламы и спама из чата")
+        .setDescription("\n**Категория**: Chat\n**Описание**: Удаляет рекламу и спам из чата")
         .setColor(client.colors.kamiblue)
         .setFooter("カミブルー！", client.user.avatarURL())
         message.channel.send(FaqAntiSpamEmbedRu)

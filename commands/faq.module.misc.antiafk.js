@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
     if ((message.channel.id == "724349410858893372") || (message.channel.id == "722436626248237076")) {
         let FaqAntiAFKRu = new Discord.MessageEmbed()
         .setTitle("AntiAFK")
-        .setDescription("\n**Категория**: Misc\n**Описание**: Защищает ок кика за AFK")
+        .setDescription("\n**Категория**: Misc\n**Описание**: Защищает от кика за AFK")
         .setColor(client.colors.kamiblue)
         .setFooter("カミブルー！", client.user.avatarURL())
         message.channel.send(FaqAntiAFKRu)

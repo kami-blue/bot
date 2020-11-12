@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
     if ((message.channel.id == "724349410858893372") || (message.channel.id == "722436626248237076")) {
         let FaqExtraTabRu = new Discord.MessageEmbed()
         .setTitle("ExtraTab")
-        .setDescription("\n**Категория**: Render\n**Описание**: Расширяет таблицу игроков")
+        .setDescription("\n**Категория**: Render\n**Описание**: Расширяет список игроков (TAB)")
         .setColor(client.colors.kamiblue)
         .setFooter("カミブルー！", client.user.avatarURL())
         message.channel.send(FaqExtraTabRu)

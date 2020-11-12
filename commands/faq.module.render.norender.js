@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
     if ((message.channel.id == "724349410858893372") || (message.channel.id == "722436626248237076")) {
         let FaqNoRenderRu = new Discord.MessageEmbed()
         .setTitle("NoRender")
-        .setDescription("\n**Категория**: Render\n**Описание**: Игнорировать пакеты появления сущностей")
+        .setDescription("\n**Категория**: Render\n**Описание**: Игнорирует пакеты появления сущностей")
         .setColor(client.colors.kamiblue)
         .setFooter("カミブルー！", client.user.avatarURL())
         message.channel.send(FaqNoRenderRu)

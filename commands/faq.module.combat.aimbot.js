@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
     if ((message.channel.id == "724349410858893372") || (message.channel.id == "722436626248237076")) {
         let FaqAimBotRu = new Discord.MessageEmbed()
         .setTitle("AimBot")
-        .setDescription("\n**Категория**: Combat\n**Описание**: Автоматически нацеливается на объекты за вас.")
+        .setDescription("\n**Категория**: Combat\n**Описание**: Автоматически нацеливается на объекты вместо вас.")
         .setColor(client.colors.kamiblue)
         .setFooter("カミブルー！", client.user.avatarURL())
         message.channel.send(FaqAimBotRu)

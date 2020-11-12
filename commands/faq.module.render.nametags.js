@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
     if ((message.channel.id == "724349410858893372") || (message.channel.id == "722436626248237076")) {
         let FaqNametagsRu = new Discord.MessageEmbed()
         .setTitle("Nametags")
-        .setDescription("\n**Категория**: Render\n**Описание**: Отображает описательные теги над объектами")
+        .setDescription("\n**Категория**: Render\n**Описание**: Отображает информативные теги над объектами")
         .setColor(client.colors.kamiblue)
         .setFooter("カミブルー！", client.user.avatarURL())
         message.channel.send(FaqNametagsRu)

@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
     if ((message.channel.id == "724349410858893372") || (message.channel.id == "722436626248237076")) {
         let FaqCrystalAuraRu = new Discord.MessageEmbed()
         .setTitle("CrystalAura")
-        .setDescription("\n**Категория**: Combat\n**Описание**: Помещает Кристаллы Края, чтобы убивать врагов")
+        .setDescription("\n**Категория**: Combat\n**Описание**: Ставит Кристаллы Края, чтобы убивать врагов")
         .setColor(client.colors.kamiblue)
         .setFooter("カミブルー！", client.user.avatarURL())
         message.channel.send(FaqCrystalAuraRu)

@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
     if ((message.channel.id == "724349410858893372") || (message.channel.id == "722436626248237076")) {
         let FaqBookCrashRu = new Discord.MessageEmbed()
         .setTitle("BookCrash")
-        .setDescription("\n**Категория**: Misc\n**Описание**: Краш сервера при отправке больших пакетов")
+        .setDescription("\n**Категория**: Misc\n**Описание**: Крашит сервера отправляя большие пакеты")
         .setColor(client.colors.kamiblue)
         .setFooter("カミブルー！", client.user.avatarURL())
         message.channel.send(FaqBookCrashRu)

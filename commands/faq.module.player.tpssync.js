@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
     if ((message.channel.id == "724349410858893372") || (message.channel.id == "722436626248237076")) {
         let FaqTpsSyncRu = new Discord.MessageEmbed()
         .setTitle("TpsSync")
-        .setDescription("\n**Категория**: Player\n**Описание**: Синхронизирует состояния блоков с сервером TPS")
+        .setDescription("\n**Категория**: Player\n**Описание**: Синхронизирует состояния блока с TPS сервера")
         .setColor(client.colors.kamiblue)
         .setFooter("カミブルー！", client.user.avatarURL())
         message.channel.send(FaqTpsSyncRu)

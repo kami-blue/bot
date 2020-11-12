@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
     if ((message.channel.id == "724349410858893372") || (message.channel.id == "722436626248237076")) {
         let FaqWaypointRenderRu = new Discord.MessageEmbed()
         .setTitle("WaypointRender")
-        .setDescription("\n**Категория**: Render\n**Описание**: Показывает направление к сохраненным точкам")
+        .setDescription("\n**Категория**: Render\n**Описание**: Показывает сохранённые точки")
         .setColor(client.colors.kamiblue)
         .setFooter("カミブルー！", client.user.avatarURL())
         message.channel.send(FaqWaypointRenderRu)

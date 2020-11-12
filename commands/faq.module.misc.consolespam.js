@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
     if ((message.channel.id == "724349410858893372") || (message.channel.id == "722436626248237076")) {
         let FaqConsoleSpamRu = new Discord.MessageEmbed()
         .setTitle("ConsoleSpam")
-        .setDescription("\n**Категория**: Misc\n**Описание**: Спамит консоли Spigot, отправляя недопустимые пакеты UpdateSign")
+        .setDescription("\n**Категория**: Misc\n**Описание**: Спамит консоли Spigot серверов, отправляя недопустимые пакеты UpdateSign")
         .setColor(client.colors.kamiblue)
         .setFooter("カミブルー！", client.user.avatarURL())
         message.channel.send(FaqConsoleSpamRu)
