@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
     if ((message.channel.id == "724349410858893372") || (message.channel.id == "722436626248237076")) {
         let FaqBlockDataRu = new Discord.MessageEmbed()
         .setTitle("BlockData")
-        .setDescription("\n**Категория**: Misc\n**Описание**: Щелкните на блок правой кнопкой мыши, чтобы отобразить их данные")
+        .setDescription("\n**Категория**: Misc\n**Описание**: Кликайте на блоки правой кнопкой мыши, чтобы отобразить их данные")
         .setColor(client.colors.kamiblue)
         .setFooter("カミブルー！", client.user.avatarURL())
         message.channel.send(FaqBlockDataRu)

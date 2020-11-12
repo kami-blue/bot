@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
     if ((message.channel.id == "724349410858893372") || (message.channel.id == "722436626248237076")) {
         let FaqNoEntityTraceRu = new Discord.MessageEmbed()
         .setTitle("NoEntityTrace")
-        .setDescription("\n**Категория**: Player\n**Описание**: Блокирует объекты, мешающие вам заниматься майнингом")
+        .setDescription("\n**Категория**: Player\n**Описание**: Блокирует сущности, мешающие вам заниматься ломанием блоков")
         .setColor(client.colors.kamiblue)
         .setFooter("カミブルー！", client.user.avatarURL())
         message.channel.send(FaqNoEntityTraceRu)

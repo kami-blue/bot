@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
     if ((message.channel.id == "724349410858893372") || (message.channel.id == "722436626248237076")) {
         let FaqAntiBookKickRu = new Discord.MessageEmbed()
         .setTitle("AntiBookKick")
-        .setDescription("\n**Категория**: Misc\n**Описание**: Предотвращает кикание при нажатии на книги")
+        .setDescription("\n**Категория**: Misc\n**Описание**: Предотвращает кик при нажатии на книги")
         .setColor(client.colors.kamiblue)
         .setFooter("カミブルー！", client.user.avatarURL())
         message.channel.send(FaqAntiBookKickRu)

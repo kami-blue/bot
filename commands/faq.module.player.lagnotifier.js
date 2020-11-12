@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
     if ((message.channel.id == "724349410858893372") || (message.channel.id == "722436626248237076")) {
         let FaqLagNotifierRu = new Discord.MessageEmbed()
         .setTitle("LagNotifier")
-        .setDescription("\n**Категория**: Player\n**Описание**: Displays a warning when the server is laggin")
+        .setDescription("\n**Категория**: Player\n**Описание**: Предупреждает когда сервер лагет")
         .setColor(client.colors.kamiblue)
         .setFooter("カミブルー！", client.user.avatarURL())
         message.channel.send(FaqLagNotifierRu)

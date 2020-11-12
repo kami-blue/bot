@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
     if ((message.channel.id == "724349410858893372") || (message.channel.id == "722436626248237076")) {
         let FaqPortalGodModeRu = new Discord.MessageEmbed()
         .setTitle("PortalGodMode")
-        .setDescription("\n**Категория**: Player\n**Описание**: Не получать урон, находясь в портале")
+        .setDescription("\n**Категория**: Player\n**Описание**: Не получайте урон, находясь в портале")
         .setColor(client.colors.kamiblue)
         .setFooter("カミブルー！", client.user.avatarURL())
         message.channel.send(FaqPortalGodModeRu)

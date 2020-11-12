@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
     if ((message.channel.id == "724349410858893372") || (message.channel.id == "722436626248237076")) {
         let FaqAutoRespawnRu = new Discord.MessageEmbed()
         .setTitle("AutoRespawn")
-        .setDescription("\n**Категория**: Misc\n**Описание**: Автоматически возрождается после смерти")
+        .setDescription("\n**Категория**: Misc\n**Описание**: Автоматически возрождает после смерти")
         .setColor(client.colors.kamiblue)
         .setFooter("カミブルー！", client.user.avatarURL())
         message.channel.send(FaqAutoRespawnRu)

@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
     if ((message.channel.id == "724349410858893372") || (message.channel.id == "722436626248237076")) {
         let FaqStorageESPRu = new Discord.MessageEmbed()
         .setTitle("StorageESP")
-        .setDescription("\n**Категория**: Render\n**Описание**: Подсвечивает единицы хранения в мире")
+        .setDescription("\n**Категория**: Render\n**Описание**: Подсвечивает блоки-хранилища")
         .setColor(client.colors.kamiblue)
         .setFooter("カミブルー！", client.user.avatarURL())
         message.channel.send(FaqStorageESPRu)

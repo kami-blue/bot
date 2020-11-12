@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
     if ((message.channel.id == "724349410858893372") || (message.channel.id == "722436626248237076")) {
         let FaqTrajectoriesRu = new Discord.MessageEmbed()
         .setTitle("Trajectories")
-        .setDescription("\n**Категория**: Render\n**Описание**: Рисует линии туда, где траектории будут падать")
+        .setDescription("\n**Категория**: Render\n**Описание**: Рисует траекторию падения")
         .setColor(client.colors.kamiblue)
         .setFooter("カミブルー！", client.user.avatarURL())
         message.channel.send(FaqTrajectoriesRu)

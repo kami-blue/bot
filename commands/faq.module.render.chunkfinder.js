@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
     if ((message.channel.id == "724349410858893372") || (message.channel.id == "722436626248237076")) {
         let FaqChunkFinderRu = new Discord.MessageEmbed()
         .setTitle("ChunkFinder")
-        .setDescription("\n**Категория**: Render\n**Описание**: Подсвечивает последние сгенерированные чанки")
+        .setDescription("\n**Категория**: Render\n**Описание**: Подсвечивает только что сгенерированные чанки")
         .setColor(client.colors.kamiblue)
         .setFooter("カミブルー！", client.user.avatarURL())
         message.channel.send(FaqChunkFinderRu)

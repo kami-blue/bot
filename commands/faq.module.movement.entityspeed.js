@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
     if ((message.channel.id == "724349410858893372") || (message.channel.id == "722436626248237076")) {
         let FaqEntitySpeedRu = new Discord.MessageEmbed()
         .setTitle("EntitySpeed")
-        .setDescription("\n**Категория**: Movement\n**Описание**: Менять ваши ездовые качества со стороны сервера")
+        .setDescription("\n**Категория**: Movement\n**Описание**: Используйте движение на стороне клиента чтобы преодолеть звуковой барьер, сидя на сущности")
         .setColor(client.colors.kamiblue)
         .setFooter("カミブルー！", client.user.avatarURL())
         message.channel.send(FaqEntitySpeedRu)

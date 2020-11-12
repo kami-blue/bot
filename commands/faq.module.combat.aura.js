@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
     if ((message.channel.id == "724349410858893372") || (message.channel.id == "722436626248237076")) {
         let FaqAuraRu = new Discord.MessageEmbed()
         .setTitle("Aura")
-        .setDescription("\n**Категория**: Combat\n**Описание**: Бьет по объектам вокруг вас")
+        .setDescription("\n**Категория**: Combat\n**Описание**: Бьет по сущностям вокруг вас")
         .setColor(client.colors.kamiblue)
         .setFooter("カミブルー！", client.user.avatarURL())
         message.channel.send(FaqAuraRu)

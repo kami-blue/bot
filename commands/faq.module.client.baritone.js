@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
     if ((message.channel.id == "724349410858893372") || (message.channel.id == "722436626248237076")) {
         let FaqBaritoneRu = new Discord.MessageEmbed()
         .setTitle("Baritone")
-        .setDescription("\n**Категория**: Client\n**Описание**: Конфигурирует настройки баритона")
+        .setDescription("\n**Категория**: Client\n**Описание**: Конфигурирует настройки Baritone")
         .setColor(client.colors.kamiblue)
         .setFooter("カミブルー！", client.user.avatarURL())
         message.channel.send(FaqBaritoneRu)

@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
     if ((message.channel.id == "724349410858893372") || (message.channel.id == "722436626248237076")) {
         let FaqVisualRangeRu = new Discord.MessageEmbed()
         .setTitle("VisualRange")
-        .setDescription("\n**Категория**: Combat\n**Описание**: Показывает игроков, которые входят в диапазон и выходят из него в чате")
+        .setDescription("\n**Категория**: Combat\n**Описание**: Показывает игроков, которые входят в зону видимости и выходят из неё в чате")
         .setColor(client.colors.kamiblue)
         .setFooter("カミブルー！", client.user.avatarURL())
         message.channel.send(FaqVisualRangeRu)

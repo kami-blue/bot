@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
     if ((message.channel.id == "724349410858893372") || (message.channel.id == "722436626248237076")) {
         let FaqStepRu = new Discord.MessageEmbed()
         .setTitle("Step")
-        .setDescription("\n**Категория**: Movement\n**Описание**: Изменяет ванильное поведение для прыжка")
+        .setDescription("\n**Категория**: Movement\n**Описание**: Изменяет ванильную механику вставания на блок")
         .setColor(client.colors.kamiblue)
         .setFooter("カミブルー！", client.user.avatarURL())
         message.channel.send(FaqStepRu)

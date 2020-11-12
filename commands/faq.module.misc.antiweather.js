@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
     if ((message.channel.id == "724349410858893372") || (message.channel.id == "722436626248237076")) {
         let FaqAntiWeatherRu = new Discord.MessageEmbed()
         .setTitle("AntiWeather")
-        .setDescription("\n**Категория**: Misc\n**Описание**: Удаляет дождь из вашего мира")
+        .setDescription("\n**Категория**: Misc\n**Описание**: Не показывает частицы дождя в мире")
         .setColor(client.colors.kamiblue)
         .setFooter("カミブルー！", client.user.avatarURL())
         message.channel.send(FaqAntiWeatherRu)
