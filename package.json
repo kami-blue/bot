@@ -18,7 +18,7 @@
     "discord.js": "discordjs/discord.js",
     "graceful-fs": "^4.2.4",
     "ms": "^2.1.2",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "opusscript": "^0.0.7",
     "yt-search": "^2.0.2",
     "ytdl-core-discord": "^1.2.4",
