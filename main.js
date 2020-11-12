@@ -193,6 +193,10 @@ client.on('message', async message => {
         message.delete();
         message.channel.send("https://cdn.discordapp.com/attachments/634010583527587840/756220420658823304/video.mp4");
     }
+    
+    if (message.content.includes("then")) {
+        message.channel.send("than*")
+    }
 
     if (/cursedballs/.test(message.content)) message.delete()
 
