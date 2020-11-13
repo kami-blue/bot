@@ -7,7 +7,6 @@ const ytdl = require("ytdl-core-discord")
 module.exports.run = async (client, message, args) => {
 
     config = client.config;
-    if (!message.member.roles.cache.find(role => config["dj_role"] === role.name)) return message.channel.send("You do not have permissions to use music.");
     if (!message.member.voice.channel) return message.channel.send("You are not in a voice channel.")
 
         const serverQueue = client.queue.get(message.guild.id);
