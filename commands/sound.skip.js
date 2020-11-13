@@ -9,7 +9,6 @@ let usedVote = false;
 module.exports.run = async (client, message, args) => {
     config = client.config;
     const voiceChannel = message.member.voice.channel;
-    if (!message.member.roles.cache.find(role => config["dj_role"] === role.name)) return message.channel.send("You do not have permissions to use music.");
     if (!message.member.voice.channel) return message.channel.send("You are not in a voice channel.")
 
     const serverQueue = client.queue.get(message.guild.id)
@@ -25,9 +24,10 @@ module.exports.run = async (client, message, args) => {
         } else {
             if (!usedVote) {
                 usedVote = true;
-                const votesRequired = Math.ceil(members.size * .6);
+                const votesRequired = Math.ceil(members.size * .6 - 1);
                 const embed = new Discord.MessageEmbed()
                     .setDescription(`Total Votes Required to Skip: ${votesRequired}`)
+                    .setFooter("You can ask someone with the Music role to force skip this song!")
                     .setColor(0x9b90ff)
                 const msg = await message.channel.send(embed)
                 await msg.react("⏩")
