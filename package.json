@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@discordjs/opus": "^0.3.2",
-    "canvas": "2.6.1",
+    "canvas": "^2.6.1",
     "cat-ascii-faces": "^2.0.0",
     "cat-facts": "^1.0.2",
     "child-process": "1.0.2",
