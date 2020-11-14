@@ -20,14 +20,14 @@ module.exports.run = async (client, message, args) => {
     if (serverQueue && channel) {
         const members = channel.members.filter(m => !m.user.bot);
         if (members.size === 1) {
-            message.channel.send(`\`⏩\` Skipping ${serverQueue.queue[0].title}`)
         } else {
             if (!usedVote) {
                 usedVote = true;
                 const votesRequired = Math.ceil(members.size * .6 - 1);
                 const embed = new Discord.MessageEmbed()
-                    .setDescription(`Total Votes Required to Skip: ${votesRequired}`)
+                    .setDescription(`Total Votes Required to Skip: **${votesRequired}**`)
                     .setFooter("You can ask someone with the Music role to force skip this song!")
+                    .setTimestamp()
                     .setColor(0x9b90ff)
                 const msg = await message.channel.send(embed)
                 await msg.react("⏩")
