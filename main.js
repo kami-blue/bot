@@ -14,11 +14,11 @@ const config = {
         },
         {
             "name": "FAQ Commands",
-            "emoji": "<:kamiblue:637407885357482004>"
+            "emoji": "<:kamiblue:759835844781277257>"
         },
         {
             "name": "Github Commands",
-            "emoji": "<:jarfix:661737679351971840>"
+            "emoji": "<:jarfix:759835845157978152>"
         },
         {
             "name": "Moderation & Utility Commands",
