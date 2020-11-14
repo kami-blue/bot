@@ -83,5 +83,3 @@ module.exports.config = {
     state : "gamma",
     page: 5
 };
-
-
