@@ -48,7 +48,7 @@ const shorteners = new RegExp("(linkify.{0,3}me|raboninco.{0,3}com|bit.{0,3}ly|t
 const discordInviteRegex = new RegExp("(d.{0,3}.{0,3}s.{0,3}c.{0,3}.{0,3}r.{0,3}d).{0,7}(gg|com.{0,3}invite)");
 const zoomInviteRegex = new RegExp("(zoom.{0,2}\\..{0,2}us.{0,5}[^0-9].{11})");
 const hacksRegex = new RegExp("(hack|hacks|cheat|cheats|hacking)");
-const slursRegex = new RegExp("(nigg(?! ).{1,2}|[nN].?[iI1].?([gGkKbBQq].?){1,2}.?[aA4eErR]|tran(?![spfqcg]).{1,2}|fag.{1,2}t|r[ea]tar.)");
+const slursRegex = new RegExp("(nigg(?! ).{1,2}|[nN][ ]?[iI1][ ]?([gGbB][ ]?){1,2}[ ]?[aA4eE][ ]?[rR]?|[tT][rR][aA4][nN](?![spfqcg]).{1,2}|[fF][aA4][gG].{1,2}t|[rR][eaEA4][tT][aA4][rR].)");
 
 /* help regexes */
 const elytraRegex1 = new RegExp("(elytra|elytra.{0,2}light|elytra.{0,2}\\+|elytra.{0,2}fly)");
