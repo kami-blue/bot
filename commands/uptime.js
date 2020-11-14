@@ -1,38 +1,29 @@
 const Discord = require("discord.js");
+const fs = require("graceful-fs");
+const exec = require('child_process').exec;
 
-module.exports.run = async (client, message, args) => {
+module.exports.run = async (client, message, args) => { 
+    const myShellScript = exec('uptime -p | cut -c 4-');
+    myShellScript.stdout.on('data', (data) => { 
+        message.channel.send(
+		new Discord.MessageEmbed()
+		.setTitle("Uptime")
+		.setColor(client.colors.kamiblue)
+		.setDescription(data)
+	)	
+    });
 
-    const botUptime = {
-        seconds: Math.round(client.uptime / 1000),
-        minutes: Math.round(client.uptime / 60000),
-        hours: Math.round(client.uptime / 3600000),
-        days: Math.round(client.uptime / 86400000),
-        months: Math.round(client.uptime / 2628000000),
-        years: Math.round(client.uptime / 31536000000),
-    }
-    let trueUptime = '0'
-    const botServer = client.guilds.cache.size
-    if (botUptime.seconds < 60) {
-        trueUptime = botUptime.seconds + ' seconds'
-    } else if (botUptime.minutes < 60) {
-        trueUptime = botUptime.minutes + ' minutes'
-    } else if (botUptime.hours < 24) {
-        trueUptime = botUptime.hours + ' hours'
-    } else if (botUptime.days < 30) {
-        trueUptime = botUptime.days + ' days'
-    } else {
-        trueUptime = botUptime.years + ' years'
-    }
+    myShellScript.stderr.on('data', (data) => {
+        console.error(data);
+    });
 
-    message.channel.send(`Uptime: ${trueUptime}`);
 }
-
 
 module.exports.config = {
     name: "uptime",
     aliases: ["up"],
     use: "uptime",
-    description: "Find out the bot uptime.",
+    description: "Shows server uptime",
     state: "gamma",
     page: 4
 };
