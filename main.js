@@ -160,6 +160,18 @@ fs.readdir("./commands/", (err, files) => {
     console.log("\n\n\x1b[1mCommands Loaded\x1b[22m\n\n")
 });
 
+let logChannel = '776503890572083240'
+
+process.on('unhandledRejection', async error => {
+    channel = client.channels.cache.find(x => x.id === logChannel)
+
+    let errEmbed = new Discord.MessageEmbed()
+        .setTitle('Error')
+        .setDescription(`\`\`\`js\nERROR - ${event.name}\nMESSAGE - ${event.message}\nSTACKTRACE - ${event.stack}\`\`\``)
+        .setTimestamp()
+    await channel.send(errEmbed)
+})
+
 client.on('message', async message => {
     let messageArray = message.content.split(" ")
     let prefix = config.prefix;
