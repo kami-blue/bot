@@ -197,6 +197,10 @@ client.on('message', async message => {
     if (Math.random() < 0.2 && message.content.includes("then")) {
         message.channel.send("than*")
     }
+    
+    if (Math.random() < 0.15 && message.content.includes("your")) {
+        message.channel.send("you're*")
+    }
 
     if (/cursedballs/.test(message.content)) message.delete()
 
