@@ -198,6 +198,10 @@ client.on('message', async message => {
         message.channel.send("than*")
     }
     
+    if (Math.random() < 0.1 && message.content.includes("arent")) {
+        message.channel.send("aren't*")
+    }
+    
     if (Math.random() < 0.15 && message.content.includes("your")) {
         message.channel.send("you're*")
     }
