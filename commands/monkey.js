@@ -21,7 +21,7 @@ module.exports.run = async (client, message, args) => {
 
 module.exports.config = {
     name: "monkey",
-    aliases: ["m", "skid", "pvp", "summit", "future", "leee", "windows", "salhack"],
+    aliases: ["m", "skid", "pvp", "summit", "future", "leee", "windows", "salhack", "pyro"],
     use: "monkey",
     description: "funny monkey",
     state: "gamma",
