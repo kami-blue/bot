@@ -1,4 +1,4 @@
 #!/bin/bash
 
-cd /home/mika/bot
+cd ~/bot
 nc termbin.com 9999 < logs/latest.log
