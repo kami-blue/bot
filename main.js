@@ -203,7 +203,7 @@ client.on('message', async message => {
     }
     
     if (Math.random() < 0.15 && message.content.includes("your")) {
-        message.channel.send("you're*")
+        message.channel.send("https://tenor.com/view/explode-gif-18285637")
     }
 
     if (/cursedballs/.test(message.content)) message.delete()
