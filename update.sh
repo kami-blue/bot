@@ -1,5 +1,5 @@
 #!/bin/bash
 
-cd /home/mika/bot
+cd ~
 git pull origin master
 pm2 reload bot
