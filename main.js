@@ -194,15 +194,15 @@ client.on('message', async message => {
         message.channel.send("https://cdn.discordapp.com/attachments/634010583527587840/756220420658823304/video.mp4");
     }
     
-    if (Math.random() < 0.2 && message.content.includes("then")) {
+    if (Math.random() < 0.025 && message.content.includes("then")) {
         message.channel.send("than*")
     }
     
-    if (Math.random() < 0.1 && message.content.includes("arent")) {
+    if (Math.random() < 0.025 && message.content.includes("arent")) {
         message.channel.send("aren't*")
     }
     
-    if (Math.random() < 0.15 && message.content.includes("your")) {
+    if (Math.random() < 0.025 && message.content.includes("your")) {
         message.channel.send("https://tenor.com/view/explode-gif-18285637")
     }
 
