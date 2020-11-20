@@ -16,11 +16,11 @@ module.exports.run = async (client, message, args) => {
     if(message.guild.emojis.cache.size > maxEmoji) return message.channel.send('Guild has reached the maximum number emoji slots.')
 
     if (!message.guild.members.cache.get(client.user.id).hasPermission("MANAGE_EMOJIS")) {
-        return message.channel.send(`\`❌\` Missing Permissions: \`MANAGE_EMOJIS\``)
+        return message.channel.send(`\`❌\` Bot is Missing Permissions: \`MANAGE_EMOJIS\``)
     }
 
     if(!message.guild.members.cache.get(message.author.id).hasPermission("MANAGE_EMOJIS")) {
-        return message.channel.send(`\`❌\` Missing Permissions: \`MANAGE_EMOJIS\``)
+        return message.channel.send(`\`❌\` You are Missing Permissions: \`MANAGE_EMOJIS\``)
     }
 
     if (!args[0]) {
