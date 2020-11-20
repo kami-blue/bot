@@ -3,13 +3,26 @@ const emojiRegex = /^<:[\w\d]*:\d{18}>$/g
 /**
  * @author vypr-ysl
  * @command stealmoji
- */
+ **/
 
 module.exports.run = async (client, message, args) => {
+
+    const guildTier = message.guild.premiumTier
+    if (guildTier == 0) maxEmoji = 50
+    if (guildTier == 1) maxEmoji = 100
+    if (guildTier == 2) maxEmoji = 150
+    if (guildTier == 3) maxEmoji = 250
+
+    if(message.guild.emojis.cache.size > maxEmoji) return message.channel.send('Guild has reached the maximum number emoji slots.')
 
     if (!message.guild.members.cache.get(client.user.id).hasPermission("MANAGE_EMOJIS")) {
         return message.channel.send(`\`❌\` Missing Permissions: \`MANAGE_EMOJIS\``)
     }
+
+    if(!message.guild.members.cache.get(message.author.id).hasPermission("MANAGE_EMOJIS")) {
+        return message.channel.send(`\`❌\` Missing Permissions: \`MANAGE_EMOJIS\``)
+    }
+
     if (!args[0]) {
         return message.channel.send(`Please provide an emoji to steal.`)
     }
