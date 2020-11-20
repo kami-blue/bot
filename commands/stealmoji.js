@@ -8,10 +8,19 @@ const emojiRegex = /^<:[\w\d]*:\d{18}>$/g
 module.exports.run = async (client, message, args) => {
 
     const guildTier = message.guild.premiumTier
-    if (guildTier == 0) maxEmoji = 50
-    if (guildTier == 1) maxEmoji = 100
-    if (guildTier == 2) maxEmoji = 150
-    if (guildTier == 3) maxEmoji = 250
+
+    let maxEmoji = 0
+
+    switch (guildTier) {
+        case 0:
+            maxEmoji = 50;
+        case 1:
+            maxEmoji = 100;
+        case 2:
+            maxEmoji = 150;
+        case 3:
+            maxEmoji = 250;
+    }
 
     if(message.guild.emojis.cache.size > maxEmoji) return message.channel.send('Guild has reached the maximum number emoji slots.')
 
