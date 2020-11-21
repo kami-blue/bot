@@ -11,8 +11,9 @@ module.exports.run = async (client, message, args) => {
     if (!user) return message.channel.send("Please mention a valid user.");
 
     const embed = new Discord.MessageEmbed()
-        .setTitle(user.username)
         .setImage(user.avatarURL({dynamic: true, size: 512, format: "png"}))
+        .setFooter(user.username, user.avatarURL())
+        .setColor(client.colors.kamiblue)
     message.channel.send(embed)
 }
 
