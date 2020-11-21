@@ -13,6 +13,7 @@ module.exports.run = async (client, message, args) => {
     const embed = new Discord.MessageEmbed()
         .setTitle(user.username)
         .setImage(user.avatarURL({dynamic: true, size: 512, format: "png"}))
+        .setColor(client.colors.kamiblue)
     message.channel.send(embed)
 }
 
