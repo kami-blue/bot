@@ -20,9 +20,9 @@ module.exports.run = async (client, message, args) => {
 };
 
 module.exports.config = {
-    name: "faq/cooordslog",
+    name: "faq/CoordsLog",
     aliases: [],
-    use: "faq/cooordslog",
+    use: "faq/CoordsLog",
     description: "What is CoordsLog?",
     page: -1
 };
