@@ -297,7 +297,7 @@ async function autoResponder(message) {
         }
 
         /* slurs regex */
-        if (slursRegex.test(cleanedMessage)) {
+        if (slursRegex.test(cleanedMessage.replace(/mini.{0,2}game/, ""))) {
             message.reply(warnRule(message, "1a, 1b, 1c, 1d", "slurs are not allowed in this Discord server"));
             return message.delete()
         }
@@ -321,12 +321,8 @@ async function autoResponder(message) {
             return message.delete()
         }
         
-        if (/1[., -]1[., -]6/.test(cleanedMessage)) {
-            message.reply(replyMsg("Download the latest nightly from <#634549110145286156>, v1.1.6 is not the latest version"))
-        }
-
-        if (/1[., -]1[., -]7.{0,2}beta/.test(cleanedMessage)) {
-            message.reply(replyMsg("v1.1.7-beta is not the full version, as we use v1.1.7-hash. Use `;tsc` in game to get the current version"));
+        if (/1[., -]1[., -][67]/.test(cleanedMessage)) {
+            message.reply(replyMsg("Download the latest nightly from <#634549110145286156>, v1.1.6 / v1.1.7 is not the latest version"))
         }
 
         if (shorteners.test(cleanedMessage)) {
