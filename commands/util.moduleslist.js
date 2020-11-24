@@ -198,155 +198,250 @@ module.exports.modules = {
         name: "VisualRange",
         descriptionru: "\n**Категория**: Combat\n**Описание**: Показывает игроков, которые входят в зону видимости и выходят из неё в чате.",
         descriptionen: "\n**Category**: Combat\n**Description**: Shows players who enter and leave range in chat."
-    }
+    },
     antiafk: {
         name: "AntiAFK",
         descriptionru: "\n**Категория**: Misc\n**Описание**: Защищает от кика за AFK",
         descriptionen: "\n**Category**: Misc\n**Description**: Prevents being kicked for AFK"
-    }
+    },
     antibookkick: {
         name: "AntiBookKick",
         descriptionru: "\n**Категория**: Misc\n**Описание**: Предотвращает кик при нажатии на книги",
         descriptionen: "\n**Category**: Misc\n**Description**: Prevents being kicked by clicking on books"
-    }
+    },
     antidisconnect: {
         name: "AntiDisconnect",
         descriptionru: "\n**Категория**: Misc\n**Описание**: Вы уверены, что хотите отключиться?",
         descriptionen: "\n**Category**: Misc\n**Description**: Are you sure you want to disconnect?"
-    }
+    },
     antiweather: {
         name: "AntiWeather",
         descriptionru: "\n**Категория**: Misc\n**Описание**: Не показывает частицы дождя в мире",
         descriptionen: "\n**Category**: Misc\n**Description**: Removes rain from your world"
-    }
+    },
     autofish: {
         name: "AutoFish",
         descriptionru: "\n**Категория**: Misc\n**Описание**: Автоматически ловит рыбу",
         descriptionen: "\n**Category**: Misc\n**Description**: Automatically catch fish"
-    }
+    },
     automine: {
         name: "AutoMine",
         descriptionru: "\n**Категория**: Misc\n**Описание**: Автоматически добывает выбранную руду",
         descriptionen: "\n**Category**: Misc\n**Description**: Automatically mines chosen ores"
-    }
+    },
     autonametag: {
         name: "AutoNameTag",
         descriptionru: "\n**Категория**: Misc\n**Описание**: Автоматически применяет бирку на сущностях",
         descriptionen: "\n**Category**: Misc\n**Description**: Automatically nametags entities"
-    }
+    },
     autoobsidian: {
         name: "AutoObsidian",
         descriptionru: "\n**Категория**: Misc\n**Описание**: Автоматически добывает эндер сундуки для получения обсидиана.",
         descriptionen: "\n**Category**: Misc\n**Description**: Mines ender chest automatically to fill inventory with obsidian"
-    }
+    },
     autoreconnect: {
         name: "AutoReconnect",
         descriptionru: "\n**Категория**: Misc\n**Описание**: Автоматически переподключает после отключения от сервера",
         descriptionen: "\n**Category**: Misc\n**Description**: Automatically reconnects after being disconnected"
-    }
+    },
     autorespawn: {
         name: "AutoRespawn",
         descriptionru: "\n**Категория**: Misc\n**Описание**: Автоматически возрождает после смерти",
         descriptionen: "\n**Category**: Misc\n**Description**: Automatically respawn after dying"
-    }
+    },
     autospawner: {
         name: "AutoSpawner",
         descriptionru: "\n**Категория**: Misc\n**Описание**: Автоматически создает визеров, железных големов и снеговиков.",
         descriptionen: "\n**Category**: Misc\n**Description**: Automatically spawns Withers, Iron Golems and Snowmen"
-    }
+    },
     autotool: {
         name: "AutoTool",
         descriptionru: "\n**Категория**: Misc\n**Описание**: Автоматически переключаться на лучшие инструменты при ломании блоков или атаке",
         descriptionen: "\n**Category**: Misc\n**Description**: Automatically switch to the best tools when mining or attacking"
-    }
+    },
     autotunnel: {
         name: "AutoTunnel",
         descriptionru: "\n**Категория**: Misc\n**Описание**: Автоматически прокладывает туннели заданного размера",
         descriptionen: "\n**Category**: Misc\n**Description**: Automatically tunnels forward, at a given size"
-    }
+    },
     beaconselector: {
         name: "BeaconSelector",
         descriptionru: "\n**Категория**: Misc\n**Описание**: Выберите любой из 5 эффектов маяка независимо от базовой высоты маяка.",
         descriptionen: "\n**Category**: Misc\n**Description**: Choose any of the 5 beacon effects regardless of beacon base height"
-    }
+    },
     blockdata: {
         name: "BlockData",
         descriptionru: "\n**Категория**: Misc\n**Описание**: Кликайте на блоки правой кнопкой мыши, чтобы отобразить их данные",
         descriptionen: "\n**Category**: Misc\n**Description**: Right click blocks to display their data"
-    }
+    },
     bookcrash: {
         name: "BookCrash",
         descriptionru: "\n**Категория**: Misc\n**Описание**: Крашит сервера отправляя большие пакеты",
         descriptionen: "\n**Category**: Misc\n**Description**: Crashes servers by sending large packets"
-    }
+    },
     bossstack: {
         name: "BossStack",
         descriptionru: "\n**Категория**: Misc\n**Описание**: Измените графический интерфейс здоровья босса, чтобы он занимал меньше места",
         descriptionen: "\n**Category**: Misc\n**Description**: Modify the boss health GUI to take up less space"
-    }
+    },
     coloursign: {
         name: "ColourSign",
         descriptionru: "\n**Категория**: Misc\n**Описание**: Позволяет в игре красить текст на табличках",
         descriptionen: "\n**Category**: Misc\n**Description**: Allows ingame colouring of text on signs"
-    }
+    },
     consolespam: {
         name: "ConsoleSpam",
         descriptionru: "\n**Категория**: Misc\n**Описание**: Спамит консоли Spigot серверов, отправляя недопустимые пакеты UpdateSign",
         descriptionen: "\n**Category**: Misc\n**Description**: Spams Spigot consoles by sending invalid UpdateSign packets"
-    }
+    },
     coordslog: {
         name: "CoordsLog",
         descriptionru: "\n**Категория**: Misc\n**Описание**: Автоматически регистрирует ваши координаты на основе действий",
         descriptionen: "\n**Category**: Misc\n**Description**: Automatically logs your coords, based on actions"
-    }
+    },
     discordrpc: {
         name: "DiscordRPC",
         descriptionru: "\n**Категория**: Misc\n**Описание**: Передаёт информацию из KAMI Blue в Discord Rich Presence",
         descriptionen: "\n**Category**: Misc\n**Description**: Discord Rich Presence"
-    }
+    },
     entitytool: {
         name: "EntityTool",
         descriptionru: "\n**Категория**: Misc\n**Описание**: Кликайте правой кнопкой мыши на сущности, чтобы выполнять с ними действия",
         descriptionen: "\n**Category**: Misc\n**Description**: Right click entities to perform actions on them"
-    }
+    },
     fakegamemode: {
         name: "FakeGamemode",
         descriptionru: "\n**Категория**: Misc\n**Описание**: Меняет ваш режим игры со стороны клиента",
         descriptionen: "\n**Category**: Misc\n**Description**: Fakes your current gamemode client side"
-    }
+    },
     fakevanillaclient: {
         name: "FakeVanillaClient",
         descriptionru: "\n**Категория**: Misc\n**Описание**: Подделывает безмодовый клиент при подключении",
         descriptionen: "\n**Category**: Misc\n**Description**: Fakes a modless client when connecting"
-    }
+    },
     logoutlogger: {
         name: "LogoutLogger",
         descriptionru: "\n**Категория**: Misc\n**Описание**: Пишет, когда игрок покидает сервер",
         descriptionen: "\n**Category**: Misc\n**Description**: Logs when a player leaves the game"
-    }
+    },
     midclickfriends: {
         name: "MidClickFriends",
         descriptionru: "\n**Категория**: Misc\n**Описание**: Кликайте средней кнопкой мыши на игроков, чтобы добавить в друзья или удалить из друзей",
         descriptionen: "\n**Category**: Misc\n**Description**: Middle click players to friend or unfriend them"
-    }
+    },
     mountbypass: {
         name: "MountBypass",
         descriptionru: "\n**Категория**: Misc\n**Описание**: Может позволить вам размещать сундуки на животных на серверах, которые блокируют это",
         descriptionen: "\n**Category**: Misc\n**Description**: Might allow you to mount chested animals on servers that block it"
-    }
+    },
     nosoundlag: {
         name: "NoSoundLag",
         descriptionru: "\n**Категория**: Misc\n**Описание**: Предотвращает лаги звука, вызванные звуковыми машинами",
         descriptionen: "\n**Category**: Misc\n**Description**: Prevents lag caused by sound machines"
-    }
+    },
     skinflicker: {
         name: "SkinFlicker",
         descriptionru: "\n**Категория**: Misc\n**Описание**: Быстро переключает слои скина для создания крутого эффекта",
         descriptionen: "\n**Category**: Misc\n**Description**: Toggle your skin layers rapidly for a cool skin effect"
-    }
+    },
     teleportlogger: {
         name: "TeleportLogger",
         descriptionru: "\n**Категория**: Misc\n**Описание**: Пишет, когда игрок куда-то телепортируется",
         descriptionen: "\n**Category**: Misc\n**Description**: Logs when a player teleports somewhere"
+    },
+    antihunger: {
+        name: "AntiHunger",
+        descriptionru: "\n**Категория**: Movement\n**Описание**: Снижает потерю голода при движении",
+        descriptionen: "\n**Category**: Movement\n**Description**: Reduces hunger lost when moving around"
+    },
+    antilevitation: {
+        name: "AntiLevitation",
+        descriptionru: "\n**Категория**: Movement\n**Описание**: Снимает эффект зелья левитации",
+        descriptionen: "\n**Category**: Movement\n**Description**: Removes levitation potion effect"
+    },
+    autojump: {
+        name: "AutoJump",
+        descriptionru: "\n**Категория**: Movement\n**Описание**: Автоматически прыгает, если возможно",
+        descriptionen: "\n**Category**: Movement\n**Description**: Automatically jumps if possible"
+    },
+    autoremount: {
+        name: "AutoRemount",
+        descriptionru: "\n**Категория**: Movement\n**Описание**: Автоматически садится на лошадь",
+        descriptionen: "\n**Category**: Movement\n**Description**: Automatically remounts your horse"
+    },
+    autowalk: {
+        name: "AutoWalk",
+        descriptionru: "\n**Категория**: Movement\n**Описание**: Автоматически ходит куда-нибудь",
+        descriptionen: "\n**Category**: Movement\n**Description**: Automatically walks somewhere"
+    },
+    elytraflight: {
+        name: "ElytraFlight",
+        descriptionru: "\n**Категория**: Movement\n**Описание**: Позволяет бесконечно и намного легче летать на элитрах",
+        descriptionen: "\n**Category**: Movement\n**Description**: Allows infinite and way easier Elytra flying"
+    },
+    elytrareplace: {
+        name: "ElytraReplace",
+        descriptionru: "\n**Категория**: Movement\n**Описание**: Автоматически меняйте местами нагрудник и элитры.",
+        descriptionen: "\n**Category**: Movement\n**Description**: Automatically swap and replace your chestplate and elytra."
+    },
+    entityspeed: {
+        name: "EntitySpeed",
+        descriptionru: "\n**Категория**: Movement\n**Описание**: Используйте движение на стороне клиента чтобы преодолеть звуковой барьер, сидя на сущности",
+        descriptionen: "\n**Category**: Movement\n**Description**: Abuse client-sided movement to shape sound barrier breaking rideables"
+    },
+    flight: {
+        name: "Flight",
+        descriptionru: "\n**Категория**: Movement\n**Описание**:  Позволяет вам летать",
+        descriptionen: "\n**Category**: Movement\n**Description**: Makes the player fly"
+    },
+    icespeed: {
+        name: "IceSpeed",
+        descriptionru: "\n**Категория**: Movement\n**Описание**: Меняет показатель скользимости льда",
+        descriptionen: "\n**Category**: Movement\n**Description**: Changes how slippery ice is"
+    },
+    inventorymove: {
+        name: "InventoryMove",
+        descriptionru: "\n**Категория**: Movement\n**Описание**: Позволяет вам ходить с открытыми графическими интерфейсами",
+        descriptionen: "\n**Category**: Movement\n**Description**: Allows you to walk around with GUIs opened"
+    },
+    jesus: {
+        name: "Jesus",
+        descriptionru: "\n**Категория**: Movement\n**Описание**: Позволяет вам ходить по воде",
+        descriptionen: "\n**Category**: Movement\n**Description**: Allows you to walk on water"
+    },
+    noslowdown: {
+        name: "NoSlowDown",
+        descriptionru: "\n**Категория**: Movement\n**Описание**: Предотвращает замедление при использовании предмета или прохождении через паутину",
+        descriptionen: "\n**Category**: Movement\n**Description**: Prevents being slowed down when using an item or going through cobwebs"
+    },
+    safewalk: {
+        name: "SafeWalk",
+        descriptionru: "\n**Категория**: Movement\n**Описание**: Не дает вам сходить с краев",
+        descriptionen: "\n**Category**: Movement\n**Description**: Keeps you from walking off edges"
+    },
+    sprint: {
+        name: "Sprint",
+        descriptionru: "\n**Категория**: Movement\n**Описание**: Автоматически заставляет игрока бежать",
+        descriptionen: "\n**Category**: Movement\n**Description**: Automatically makes the player sprint"
+    },
+    step: {
+        name: "Step",
+        descriptionru: "\n**Категория**: Movement\n**Описание**: Изменяет ванильную механику вставания на блок",
+        descriptionen: "\n**Category**: Movement\n**Description**: Changes the vanilla behavior for stepping up blocks"
+    },
+    strafe: {
+        name: "Strafe",
+        descriptionru: "\n**Категория**: Movement\n**Описание**: Улучшает контроль в воздухе",
+        descriptionen: "\n**Category**: Movement\n**Description**: Improves control in air"
+    },
+    timerspeed: {
+        name: "TimerSpeed",
+        descriptionru: "\n**Категория**: Movement\n**Описание**: Автоматически меняет тик клиента, чтобы вы двигались быстрее",
+        descriptionen: "\n**Category**: Movement\n**Description**: Automatically change your timer to go fast"
+    },
+    velocity: {
+        name: "Velocity",
+        descriptionru: "\n**Категория**: Movement\n**Описание**: Изменяет влияние отталкивания",
+        descriptionen: "\n**Category**: Movement\n**Description**: Modify knockback impact"
     }
 }

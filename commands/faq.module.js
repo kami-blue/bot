@@ -4,10 +4,10 @@ const moduleslist = require("./util.moduleslist");
 
 module.exports.run = async (client, message, args) => {
     try {
-        const arg = moduleslist.modules[args[0].toLowerCase()]
-        const title = arg.name
-        const descriptionru = arg.descriptionru
-        const descriptionen = arg.descriptionen
+        const arg = moduleslist.modules[args[0].toLowerCase()];
+        const title = arg.name;
+        const descriptionru = arg.descriptionru;
+        const descriptionen = arg.descriptionen;
         if ((message.channel.id == "724349410858893372") || (message.channel.id == "722436626248237076")) {
             let FaqModuleRu = new Discord.MessageEmbed()
             .setTitle(title)
