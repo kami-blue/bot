@@ -21,7 +21,7 @@ module.exports.config = {
     name: "anime",
     aliases: [],
     use: "anime",
-    description: "Gives you a random image form safebooru",
+    description: "Gives you a random image from safebooru",
     state: "gamma",
     page: 1
 };
