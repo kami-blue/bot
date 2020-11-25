@@ -4,10 +4,10 @@ const moduleslist = require("./util.moduleslist");
 
 module.exports.run = async (client, message, args) => {
     try {
-        const arg = moduleslist.modules[args[0].toLowerCase()];
-        const title = arg.name;
-        const descriptionru = arg.descriptionru;
-        const descriptionen = arg.descriptionen;
+        const md = moduleslist.modules[args[0].toLowerCase()];
+        const title = md.name;
+        const descriptionru = md.descriptionru;
+        const descriptionen = md.descriptionen;
         if ((message.channel.id == "724349410858893372") || (message.channel.id == "722436626248237076")) {
             let FaqModuleRu = new Discord.MessageEmbed()
             .setTitle(title)
@@ -38,6 +38,7 @@ module.exports.run = async (client, message, args) => {
             .setColor(client.colors.kamiblue)
             .setFooter("カミブルー！", client.user.avatarURL())
             message.channel.send(FaqModuleErrorEn)
+        }
     }
 };
 

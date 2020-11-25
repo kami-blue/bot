@@ -443,5 +443,275 @@ module.exports.modules = {
         name: "Velocity",
         descriptionru: "\n**Категория**: Movement\n**Описание**: Изменяет влияние отталкивания",
         descriptionen: "\n**Category**: Movement\n**Description**: Modify knockback impact"
+    },
+    antiforcelook: {
+        name: "AntiForceLook",
+        descriptionru: "\n**Категория**: Player\n**Описание**: Не позволяет пакетам сервера поворачивать вашу голову",
+        descriptionen: "\n**Category**: Player\n**Description**: Stops server packets from turning your head"
+    },
+    autoarmour: {
+        name: "AutoArmour",
+        descriptionru: "\n**Категория**: Player\n**Описание**: Автоматически надевает броню",
+        descriptionen: "\n**Category**: Player\n**Description**: Automatically equips armour"
+    },
+    autoeat: {
+        name: "AutoEat",
+        descriptionru: "\n**Категория**: Player\n**Описание**: Автоматически ест при голодании",
+        descriptionen: "\n**Category**: Player\n**Description**: Automatically eat when hungry"
+    },
+    blink: {
+        name: "Blink",
+        descriptionru: "\n**Категория**: Player\n**Описание**: Отклоняет пакеты от сервера",
+        descriptionen: "\n**Category**: Player\n**Description**: Cancels server side packets"
+    },
+    endteleport: {
+        name: "EndTeleport",
+        descriptionru: "\n**Категория**: Player\n**Описание**: Позволяет телепортироваться при прохождении через порталы энда",
+        descriptionen: "\n**Category**: Player\n**Description**: Allows for teleportation when going through end portals"
+    },
+    fastbreak: {
+        name: "FastBreak",
+        descriptionru: "\n**Категория**: Player\n**Описание**: Ломает блок быстрее и сводит на нет задержку на ломание",
+        descriptionen: "\n**Category**: Player\n**Description**: Breaks block faster and nullifies the break delay"
+    },
+    fastuse: {
+        name: "FastUse",
+        descriptionru: "\n**Категория**: Player\n**Описание**: Используйте предметы быстрее",
+        descriptionen: "\n**Category**: Player\n**Description**: Use items faster"
+    },
+    freecam: {
+        name: "Freecam",
+        descriptionru: "\n**Категория**: Player\n**Описание**: Покинь свое тело и войди в царство богов!",
+        descriptionen: "\n**Category**: Player\n**Description**: Leave your body and transcend into the realm of the gods"
+    },
+    hungeroverlay: {
+        name: "HungerOverlay",
+        descriptionru: "\n**Категория**: Player\n**Описание**: Отображает полезную накладку над полосой голода.",
+        descriptionen: "\n**Category**: Player\n**Description**: Displays a helpful overlay over your hunger bar."
+    },
+    inventorymanager: {
+        name: "InventoryManager",
+        descriptionru: "\n**Категория**: Player\n**Описание**: Управляет вашим инвентарем автоматически",
+        descriptionen: "\n**Category**: Player\n**Description**: Manages your inventory automatically"
+    },
+    lagnotifier: {
+        name: "LagNotifier",
+        descriptionru: "\n**Категория**: Player\n**Описание**: Предупреждает когда сервер лагет",
+        descriptionen: "\n**Category**: Player\n**Description**: Displays a warning when the server is laggin"
+    },
+    liquidinteract: {
+        name: "LiquidInteract",
+        descriptionru: "\n**Категория**: Player\n**Описание**: Позволяет вам ставить блоки на жидкость!",
+        descriptionen: "\n**Category**: Player\n**Description**: Place blocks on liquid!"
+    },
+    nobreakanimation: {
+        name: "NoBreakAnimation",
+        descriptionru: "\n**Категория**: Player\n**Описание**: Предотвращает анимацию ломания блока на стороне сервера",
+        descriptionen: "\n**Category**: Player\n**Description**: Prevents block break animation server side"
+    },
+    noentitytrace: {
+        name: "NoEntityTrace",
+        descriptionru: "\n**Категория**: Player\n**Описание**: Не обращайте внимание на сущностей, мешающие ломать блоки",
+        descriptionen: "\n**Category**: Player\n**Description**: Blocks entities from stopping you from mining"
+    },
+    nopacketkick: {
+        name: "NoPacketKick",
+        descriptionru: "\n**Категория**: Player\n**Описание**: Подавление сетевых ошибок и предотвращение кика",
+        descriptionen: "\n**Category**: Player\n**Description**: Suppress network exceptions and prevent getting kicked"
+    },
+    noswing: {
+        name: "NoSwing",
+        descriptionru: "\n**Категория**: Player\n**Описание**: Отменяет пакеты взмаха мечем сервера и клиента",
+        descriptionen: "\n**Category**: Player\n**Description**: Cancels server and client swinging packets"
+    },
+    packetcancel: {
+        name: "PacketCancel",
+        descriptionru: "\n**Категория**: Player\n**Описание**: Отменяет определенные пакеты, используемые для различных действий",
+        descriptionen: "\n**Category**: Player\n**Description**: Cancels specific packets used for various actions"
+    },
+    packetlogger: {
+        name: "PacketLogger",
+        descriptionru: "\n**Категория**: Player\n**Описание**: Записывает отправленные пакеты в файл",
+        descriptionen: "\n**Category**: Player\n**Description**: Logs sent packets to a file"
+    },
+    pitchlock: {
+        name: "Pitchlock",
+        descriptionru: "\n**Категория**: Player\n**Описание**: Блокирует вашу камеру на ровном углу",
+        descriptionen: "\n**Category**: Player\n**Description**: Locks your camera pitch"
+    },
+    portalgodmode: {
+        name: "PortalGodMode",
+        descriptionru: "\n**Категория**: Player\n**Описание**: Не получайте урон, находясь в портале",
+        descriptionen: "\n**Category**: Player\n**Description**: Don't take damage in portals"
+    },
+    scaffold: {
+        name: "Scaffold",
+        descriptionru: "\n**Категория**: Player\n**Описание**: Автоматически ставит блоки под вами",
+        descriptionen: "\n**Category**: Player\n**Description**: Places blocks under you"
+    },
+    timer: {
+        name: "Timer",
+        descriptionru: "\n**Категория**: Player\n**Описание**: Меняет скорость тика клиента",
+        descriptionen: "\n**Category**: Player\n**Description**: Changes your client tick speed"
+    },
+    tpssync: {
+        name: "TpsSync",
+        descriptionru: "\n**Категория**: Player\n**Описание**: Синхронизирует состояния блока с TPS сервера",
+        descriptionen: "\n**Category**: Player\n**Description**: Synchronizes block states with the server TPS"
+    },
+    xcarry: {
+        name: "XCarry",
+        descriptionru: "\n**Категория**: Player\n**Описание**: Храните предметы в слотах для крафта",
+        descriptionen: "\n**Category**: Player\n**Description**: Store items in crafting slots"
+    },
+    yawlock: {
+        name: "YawLock",
+        descriptionru: "\n**Категория**: Player\n**Описание**: Блокирует yaw вашей камеры",
+        descriptionen: "\n**Category**: Player\n**Description**: Locks your camera yaw"
+    },
+    antifog: {
+        name: "AntiFog",
+        descriptionru: "\n**Категория**: Render\n**Описание**: Отключает туман",
+        descriptionen: "\n**Category**: Render\n**Description**: Disables or reduces fog"
+    },
+    antioverlay: {
+        name: "AntiOverlay",
+        descriptionru: "\n**Категория**: Render\n**Описание**: Предотвращает рендеринг наложения текстур огня, воды и блоков.",
+        descriptionen: "\n**Category**: Render\n**Description**: Prevents rendering of fire, water and block texture overlays."
+    },
+    armourhud: {
+        name: "ArmourHUD",
+        descriptionru: "\n**Категория**: Render\n**Описание**: Отображает вашу броню и ее прочность на экране",
+        descriptionen: "\n**Category**: Render\n**Description**: Displays your armour and it's durability on screen"
+    },
+    armourhide: {
+        name: "ArmourHide",
+        descriptionru: "\n**Категория**: Render\n**Описание**: Скрывает броню на выбранных объектах",
+        descriptionen: "\n**Category**: Render\n**Description**: Hides the armour on selected entities"
+    },
+    breadcrumbs: {
+        name: "Breadcrumbs",
+        descriptionru: "\n**Категория**: Render\n**Описание**: Рисует ваш путь сзади при движении",
+        descriptionen: "\n**Category**: Render\n**Description**: Draws a tail behind as you move"
+    },
+    breakingesp: {
+        name: "BreakingESP",
+        descriptionru: "\n**Категория**: Render\n**Описание**: Выделяет блоки, которые ломаются рядом с вами",
+        descriptionen: "\n**Category**: Render\n**Description**: Highlights blocks being breaking near you"
+    },
+    cameraclip: {
+        name: "CameraClip",
+        descriptionru: "\n**Категория**: Render\n**Описание**: Позволяет вашей камере в 3-ем лице проходить сквозь блоки",
+        descriptionen: "\n**Category**: Render\n**Description**: Allows your 3rd person camera to pass through blocks"
+    },
+    chams: {
+        name: "Chams",
+        descriptionru: "\n**Категория**: Render\n**Описание**: Позволяет видеть сущности сквозь стены",
+        descriptionen: "\n**Category**: Render\n**Description**: See entities through walls"
+    },
+    chunkfinder: {
+        name: "ChunkFinder",
+        descriptionru: "\n**Категория**: Render\n**Описание**: Подсвечивает только что сгенерированные чанки",
+        descriptionen: "\n**Category**: Render\n**Description**: Highlights newly generated chunks"
+    },
+    cleangui: {
+        name: "CleanGUI",
+        descriptionru: "\n**Категория**: Render\n**Описание**: Изменяет части графического интерфейса, чтобы они были прозрачными",
+        descriptionen: "\n**Category**: Render\n**Description**: Modifies parts of the GUI to be transparent"
+    },
+    esp: {
+        name: "ESP",
+        descriptionru: "\n**Категория**: Render\n**Описание**: Подсвечивает сущности",
+        descriptionen: "\n**Category**: Render\n**Description**: Highlights entities"
+    },
+    extratab: {
+        name: "ExtraTab",
+        descriptionru: "\n**Категория**: Render\n**Описание**: Расширяет список игроков (TAB)",
+        descriptionen: "\n**Category**: Render\n**Description**: Expands the player tab menu"
+    },
+    eyefinder: {
+        name: "EyeFinder",
+        descriptionru: "\n**Категория**: Render\n**Описание**: Проводит линии от голов сущностей туда, куда они смотрят",
+        descriptionen: "\n**Category**: Render\n**Description**: Draw lines from entity's heads to where they are looking"
+    },
+    fullbright: {
+        name: "FullBright",
+        descriptionru: "\n**Категория**: Render\n**Описание**: Делает всё светлее!",
+        descriptionen: "\n**Category**: Render\n**Description**: Makes everything brighter!"
+    },
+    holeesp: {
+        name: "HoleESP",
+        descriptionru: "\n**Категория**: Render\n**Описание**: Показывает безопасные места для crystal pvp",
+        descriptionen: "\n**Category**: Render\n**Description**: Show safe holes for crystal pvp"
+    },
+    mappreview: {
+        name: "MapPreview",
+        descriptionru: "\n**Категория**: Render\n**Описание**: Предварительный просмотр карт при наведении на них курсора",
+        descriptionen: "\n**Category**: Render\n**Description**: Previews maps when hovering over them"
+    },
+    mobowner: {
+        name: "MobOwner",
+        descriptionru: "\n**Категория**: Render\n**Описание**: Отображает владельца прирученных мобов",
+        descriptionen: "\n**Category**: Render\n**Description**: Displays the owner of tamed mobs"
+    },
+    nametags: {
+        name: "Nametags",
+        descriptionru: "\n**Категория**: Render\n**Описание**: Отображает информативные теги над объектами",
+        descriptionen: "\n**Category**: Render\n**Description**: Draws descriptive nametags above entities"
+    },
+    nohurtcam: {
+        name: "NohurtCam",
+        descriptionru: "\n**Категория**: Render\n**Описание**: Отключает эффект получения урона",
+        descriptionen: "\n**Category**: Render\n**Description**: Disables the 'hurt' camera effect"
+    },
+    norender: {
+        name: "NoRender",
+        descriptionru: "\n**Категория**: Render\n**Описание**: Игнорирует пакеты появления сущностей",
+        descriptionen: "\n**Category**: Render\n**Description**: Ignore entity spawn packets"
+    },
+    playermodel: {
+        name: "PlayerModel",
+        descriptionru: "\n**Категория**: Render\n**Описание**: Отображает модель вас или кого-то, на кого вы нападаете",
+        descriptionen: "\n**Category**: Render\n**Description**: Renders a model of you, or someone you're attacking"
+    },
+    selectionhighlight: {
+        name: "SelectionHighlight",
+        descriptionru: "\n**Категория**: Render\n**Описание**: Подсвечивать объекты на которые вы смотрите",
+        descriptionen: "\n**Category**: Render\n**Description**: Highlights object you are looking at"
+    },
+    shulkerpreview: {
+        name: "ShulkerPreview",
+        descriptionru: "\n**Категория**: Render\n**Описание**: Предварительный просмотр шалкера в графическом интерфейсе",
+        descriptionen: "\n**Category**: Render\n**Description**: Previews shulkers in the game GUI"
+    },
+    storageesp: {
+        name: "StorageESP",
+        descriptionru: "\n**Категория**: Render\n**Описание**: Подсвечивает блоки-хранилища",
+        descriptionen: "\n**Category**: Render\n**Description**: Draws an ESP on top of storage units"
+    },
+    tabfriends: {
+        name: "TabFriends",
+        descriptionru: "\n**Категория**: Render\n**Описание**: Подсвечивает ваших друзей в списке игроков",
+        descriptionen: "\n**Category**: Render\n**Description**: Highlights friends in the tab menu"
+    },
+    trajectories: {
+        name: "Trajectories",
+        descriptionru: "\n**Категория**: Render\n**Описание**: Рисует траекторию падения чего-либо",
+        descriptionen: "\n**Category**: Render\n**Description**: Draws lines to where trajectories are going to fall"
+    },
+    waypointrender: {
+        name: "WaypointRender",
+        descriptionru: "\n**Категория**: Render\n**Описание**: Показывает сохранённые точки",
+        descriptionen: "\n**Category**: Render\n**Description**: Render saved waypoints"
+    },
+    xray: {
+        name: "XRay",
+        descriptionru: "\n**Категория**: Render\n**Описание**: Смотрите на нужные блоки через другие",
+        descriptionen: "\n**Category**: Render\n**Description**: See through common blocks"
+    },
+    zoom: {
+        name: "Zoom",
+        descriptionru: "\n**Категория**: Render\n**Описание**: Изменяет FOV",
+        descriptionen: "\n**Category**: Render\n**Description**: Configures FOV"
     }
-}
+};
