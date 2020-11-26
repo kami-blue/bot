@@ -199,6 +199,8 @@ client.on('message', async message => {
     if (/ٴ/.test(message.content)) message.delete()
     
     if(message.author.id === "557228771141353511" && /b.{0,3}l.{0,3}l.{0,3}/.test(message.content.toLowercase())) message.delete()
+    
+    if (message.content.includes("loli")) message.delete()
 
 });
 
