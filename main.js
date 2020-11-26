@@ -41,7 +41,7 @@ const fetch = require("node-fetch")
 
 // Regexes
 /* bad websites */
-const grabbifyLoggers = new RegExp("(grabify.{0,3}link|leancoding.{0,3}co|leancoding.{0,3}co|leancoding.{0,3}co|freegiftcards.{0,3}co|joinmy.{0,3}site|curiouscat.{0,3}club|catsnthings.{0,3}fun|catsnthing.{0,3}com|iplogger.{0,3}org|iplogger.{0,3}com|2nc.{0,3}.co|iplogger.{0,3}ru|yip.{0,3}su|iplogger.{0,3}co|iplogger.{0,3}info|ipgrabber.{0,3}ru}ipgraber.{0,3}ru|iplis.{0,3}ru|02ip.{0,3}ru|ezstat.{0,3}ru)");
+const grabbifyLoggers = new RegExp("(kekma.{1,3}|tobidy.{0,3}|thefuncoolstuff|grabify.{0,3}link|leancoding.{0,3}co|leancoding.{0,3}co|leancoding.{0,3}co|freegiftcards.{0,3}co|joinmy.{0,3}site|curiouscat.{0,3}club|catsnthings.{0,3}fun|catsnthing.{0,3}com|iplogger.{0,3}org|iplogger.{0,3}com|2nc.{0,3}.co|iplogger.{0,3}ru|yip.{0,3}su|iplogger.{0,3}co|iplogger.{0,3}info|ipgrabber.{0,3}ru}ipgraber.{0,3}ru|iplis.{0,3}ru|02ip.{0,3}ru|ezstat.{0,3}ru)");
 const shorteners = new RegExp("(linkify.{0,3}me|raboninco.{0,3}com|bit.{0,3}ly|tinyurl.{0,3}com|bit.{0,2}do|iplogger.{0,3}org/logger|ps3cfw.{0,3}com/cool.php|rb.{0,3}gy|blasze.{0,3}tk)")
 
 /* bad messages regexes */
