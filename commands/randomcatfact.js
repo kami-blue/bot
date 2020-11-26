@@ -2,9 +2,14 @@ const Discord = require("discord.js");
 const fs = require("graceful-fs");
 const cats = require('cat-ascii-faces');
 const catFacts = require('cat-facts');
-const symbols = 'qwertyuiopasdfghjk'
+const symbols = 'qwertyuiopasdfghjk';
+const symbolarray = symbols.split('');
 function randomsymbols() {
-    return randomsymbols[Math.floor(Math.random() * symbols.length)]
+    let temp = ''
+    for (i = 0; i <= 5; i++) {
+        temp += symbolarray[Math.floor(Math.random() * symbolarray.length)]
+    }
+    return temp
 }
 /**
  * @module randomcatfact
