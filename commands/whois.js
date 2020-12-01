@@ -112,7 +112,7 @@ module.exports.run = async (client, message, args) => {
 
 module.exports.config = {
     name: "whois",
-    aliases: ["info", "about", "userinfo"],
+    aliases: ["info", "about"],
     use: "whois [@User]",
     description: "Find out more about a user",
     state: "gamma",
