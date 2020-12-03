@@ -34,5 +34,5 @@ module.exports.config = {
     use: "randomcatfact",
     description: "Shows a random cat fact!",
     state: "gamma",
-    page: 4
+    page: 1
 };
