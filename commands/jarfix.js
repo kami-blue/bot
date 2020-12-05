@@ -4,7 +4,7 @@ const fs = require("graceful-fs");
 module.exports.run = async (client, message, args) => {
     const embed = new Discord.MessageEmbed()
                 .setTitle(`Jar fix for Windows`)
-                .setDescription(`On Windows, jars can get associated with WinRar or similar programs. The JarFix program restores the `JAVA_HOME` variable and **sets jar files to be opened with Java.**`)
+                .setDescription('On Windows, jars can get associated with WinRar or similar programs. The JarFix program restores the `JAVA_HOME` variable and **sets jar files to be opened with Java.**')
                 .setColor(client.colors.kamiblue)
                 .setTimestamp();
     message.channel.send(embed)
