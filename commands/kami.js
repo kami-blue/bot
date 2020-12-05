@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
         if ((message.channel.id == "724349410858893372") || (message.channel.id == "722436626248237076")) {
         const embed = new Discord.MessageEmbed()
                 .setTitle("KAMI против KAMI Blue")
-                .setDescription("KAMI (версия Fabric) и KAMI Blue сильно отличаются.\n\nДля пользователей основными отличиями являются:\nKAMI - это `1.16.x` ** Fabric **, а KAMI Blue - `1.12.2` ** Forge **\nГрафический интерфейс совершенно другой, как функционально, так и эстетически.\nKAMI и KAMI Blue, хотя и разделяют некоторые из них, имеют много разных функций.\nВы можете получить поддержку по использованию KAMI в их [Discord](https://discord.gg/9hvwgeg).")
+                .setDescription("KAMI (версия для Fabric) и KAMI Blue сильно отличаются.\n\nДля пользователей основными отличиями являются:\nKAMI - для версий `1.16.x` ** Fabric **, а KAMI Blue - для `1.12.2` ** Forge **\nГрафические интерфейсы совершенно разные, как функционально, так и эстетически.\nKAMI и KAMI Blue имеют некоторые одинаковые модули, но есть много различий.\nВы можете получить техническую поддержку по использованию KAMI на их [Discord сервере](https://discord.gg/9hvwgeg).")
                 .setColor(client.colors.kamiblue)
                 .setTimestamp();
         message.channel.send(embed)
