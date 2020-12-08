@@ -32,9 +32,9 @@ module.exports.run = async (client, message, args) => {
 }
 
 module.exports.config = {
-    name: "help",
-    aliases: ['h', "commands"],
-    use: "help [Command]",
+    name: "h",
+    aliases: [],
+    use: "h [Command]",
     description: "A list of commands.",
     state: "gamma",
     page: 1
