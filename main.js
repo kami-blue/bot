@@ -298,7 +298,7 @@ async function autoResponder(message) {
         }
 
         /* slurs regex */
-        if (slursRegex.test(cleanedMessage.replace(/mini.{0,2}game/, ""))) {
+        if (slursRegex.test(cleanedMessage.replace(/mini.{0,2}game/, "").replace("nigeria", ""))) {
             message.reply(warnRule(message, "1a, 1b, 1c, 1d", "slurs are not allowed in this Discord server"));
             return message.delete()
         }
