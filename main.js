@@ -92,51 +92,6 @@ client.on("ready", () => {
     } catch (error) {
         (`${error}\nThis is a developmental version of the bot; as such some commands more integrated with the KAMI Blue Discord will **not** function as intended.`)
     }
-    /**
-     * @module DownloadCount
-     * @author sourTaste000
-     * @since  8/12/2020
-     */
-    setInterval(() => {
-        fetch("https://api.github.com/repos/kami-blue/nightly-releases/releases?per_page=200", {headers: {Authorization: `token ${auth.githubtoken}`}})
-            .then(response => response.json())
-            .then(data => {
-                const nightly = JSON.parse(JSON.stringify(data));
-                const latestNightlyDownloads = nightly[0].assets[0].download_count
-                let nightlyCount = 0;
-                for (i of nightly) {
-                    nightlyCount += i.assets[0].download_count
-                }
-                fetch("https://api.github.com/repos/kami-blue/client/releases", {headers: {Authorization: `token ${auth.githubtoken}`}})
-                    .then(response => response.json())
-                    .then(data => {
-                        const stable = JSON.parse(JSON.stringify(data));
-                        let stableCount = 0;
-                        for (j of stable) {
-                            stableCount += j.assets[0].download_count
-                        }
-                        fetch("https://kamiblue.org/api/v1/totalNightlies.json")
-                            .then(response => response.json())
-                            .then(data => {
-                                const totalNightlies = JSON.parse(JSON.stringify(data))
-                                client.channels.cache.get('743240299069046835').setName(`${Math.ceil((nightlyCount * (totalNightlies.count + stableCount)) / 55)} Downloads`)
-                                client.channels.cache.get('744072202869014571').setName(`${latestNightlyDownloads} Latest Nightly DLs`)
-                            })
-                            .catch((error) => {
-                                console.error("Failed to nightly counts!")
-                                console.error('Error:', error)
-                            })
-                    }).catch((error) => {
-                    console.error("Failed to grab stable downloads!")
-                    console.error('Error:', error)
-                })
-            })
-            .catch((error) => {
-                console.error("Failed to grab nightly downloads!")
-                console.error('Error:', error)
-            })
-    }, convert('10m'))
-});
 
 
 fs.readdir("./commands/", (err, files) => {
@@ -199,54 +154,6 @@ client.on('message', async message => {
     if (/ٴ/.test(message.content)) message.delete()
     
     if(message.author.id === "557228771141353511" && /b.{0,3}l.{0,3}l.{0,3}/.test(message.content.toLowercase())) message.delete()
-});
-
-/**
- * @module starboard
- * @author sourTaste000
- * ( ͡° ͜ʖ ͡°)
- */
-let pinnedMessages = [];
-let cringe = []
-let i = 0;
-let j = 0;
-
-client.on('messageReactionAdd', async (reaction, user) => {
-    if (reaction.emoji.toString() === "⭐" && !pinnedMessages.includes(reaction.message.content)) {
-        client.channels.cache.get('579741237377236992').send(`${user.username} voted for starboard`);
-        if (reaction.count === 3) {
-            pinnedMessages[i] = reaction.message.content;
-            const image = reaction.message.attachments.size > 0 ? reaction.message.attachments.array()[0].url : ''; //very pog lol
-            const starEmbed = new Discord.MessageEmbed()
-                .setAuthor("カミブルー！", "https://cdn.discordapp.com/avatars/638403216278683661/1e8bed04cb18e1cb1239e208a01893a1.png", "https://kamiblue.org")
-                .setDescription(reaction.message.content)
-                .addField("[link]", reaction.message.url, true)
-                .setFooter(reaction.message.author.username, reaction.message.author.avatarURL())
-                .setColor(client.colors.yellow)
-                .setTimestamp();
-            client.channels.cache.get('735680230148276286').send(starEmbed);
-            client.channels.cache.get('735680230148276286').send(image);
-            pinnedMessages.push(reaction.message.content)
-            i++
-        }
-    } else if(reaction.emoji.toString() === "💩" && !cringe.includes(reaction.message.content)) {
-        client.channels.cache.get('579741237377236992').send(`${user.username} voted for cringe`);
-        if(reaction.count === 3){
-            cringe[j] = reaction.message.content;
-            const cringeImage = reaction.message.attachments.size > 0 ? reaction.message.attachments.array()[0].url : '';
-            const cringeEmbed = new Discord.MessageEmbed()
-                .setAuthor("カミブルー！", "https://cdn.discordapp.com/avatars/638403216278683661/1e8bed04cb18e1cb1239e208a01893a1.png", "https://kamiblue.org")
-                .setDescription(reaction.message.content)
-                .addField("[link]", reaction.message.url, true)
-                .setFooter(reaction.message.author.username, reaction.message.author.avatarURL())
-                .setColor(client.colors.yellow)
-                .setTimestamp();
-            client.channels.cache.get('744353949624041502').send(cringeEmbed);
-            client.channels.cache.get('744353949624041502').send(cringeImage);
-            cringe.push(reaction.message.content)
-            j++
-        }
-    }
 });
 
 /* when message is edited */
