@@ -124,6 +124,10 @@ module.exports.modules = {
         descriptionru: "\n**Категория**: Combat\n**Описание**: Автоматически нацеливается на объекты вместо вас.",
         descriptionen: "\n**Category**: Combat\n**Description**: Automatically aims at entities for you."
     },
+    antibot: {
+        descriptionru: "\n**Категория**: Combat\n**Описание**: Не позволяет вам атаковать NPC",
+        descriptionen: "\n**Category**: Combat\n**Description**: Avoid attacking fake players"
+    },
     antichainpop: {
         name: "AntiChainPop",
         descriptionru: "\n**Категория**: Combat\n**Описание**: Включает Surround при потере тотема.",
