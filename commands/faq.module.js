@@ -2,7 +2,8 @@ const Discord = require("discord.js");
 const fs = require("graceful-fs");
 const moduleslist = require("./utils/moduleslist");
 
-function sendFAQMessage(nameru, nameen, descru, descen) {
+module.exports.run = async (client, message, args) => {
+    function sendFAQMessage(nameru, nameen, descru, descen) {
 	let name = nameen;
 	let desc = descen;
 	if (message.channel.id == "722436626248237076") {
@@ -14,10 +15,8 @@ function sendFAQMessage(nameru, nameen, descru, descen) {
             .setDescription(desc)
             .setColor(client.colors.kamiblue)
             .setFooter("カミブルー！", client.user.avatarURL())
-    message.channel.send(ModuleFAQ)
-}
-
-module.exports.run = async (client, message, args) => {
+        message.channel.send(ModuleFAQ)
+    }
     try {
         const md = moduleslist.modules[args[0].toLowerCase()];
         const title = md.name;
