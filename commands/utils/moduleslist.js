@@ -21,7 +21,7 @@ module.exports.modules = {
     },
     autotpa: {
         name: "AutoTPA",
-        descriptionru: "\n**Категория**: Chat\n**Описание**: Автоматически отклоняет или принимет запросы на телепортацию.",
+        descriptionru: "\n**Категория**: Chat\n**Описание**: Автоматически отклоняет или принимает запросы на телепортацию.",
         descriptionen: "\n**Category**: Chat\n**Description**: Automatically accept or decline /TPAs."
     },
     baritoneremote: {
@@ -717,5 +717,20 @@ module.exports.modules = {
         name: "Zoom",
         descriptionru: "\n**Категория**: Render\n**Описание**: Изменяет FOV",
         descriptionen: "\n**Category**: Render\n**Description**: Configures FOV"
+    },
+    extrachathistory: {
+        name: "ExtraChatHistory",
+        descriptionru: "\n**Категория**: Chat\n**Описание**: Показывает больше сообщений в истории чата",
+        descriptionen: "\n**Category**: Chat\n**Description**: Show more messages in the chat history"
+    },
+    fakeplayer: {
+        name: "FakePlayer",
+        descriptionru: "\n**Категория**: Misc\n**Описание**: Спавнит фальшивого игрока на стороне клиента",
+        descriptionen: "\n**Category**: Misc\n**Description**: Spawns a client sided fake player"
+    },
+    pingspoof: {
+        name: "PingSpoof",
+        descriptionru: "\n**Категория**: Misc\n**Описание**: Отменяет или добавляет задержку к вашем пакетам",
+        descriptionen: "\n**Category**: Misc\n**Description**: Cancels or adds delay to your ping packets"
     }
 };

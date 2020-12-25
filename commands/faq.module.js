@@ -1,6 +1,21 @@
 const Discord = require("discord.js");
 const fs = require("graceful-fs");
-const moduleslist = require("./util.moduleslist");
+const moduleslist = require("./utils/moduleslist");
+
+function sendFAQMessage(nameru, nameen, descru, descen) {
+	let name = nameen;
+	let desc = descen;
+	if (message.channel.id == "722436626248237076") {
+		name = nameru;
+		desc = descru;
+	}
+	let ModuleFAQ = new Discord.MessageEmbed()
+            .setTitle(name)
+            .setDescription(desc)
+            .setColor(client.colors.kamiblue)
+            .setFooter("カミブルー！", client.user.avatarURL())
+    message.channel.send(ModuleFAQ)
+}
 
 module.exports.run = async (client, message, args) => {
     try {
@@ -8,45 +23,17 @@ module.exports.run = async (client, message, args) => {
         const title = md.name;
         const descriptionru = md.descriptionru;
         const descriptionen = md.descriptionen;
-        if ((message.channel.id == "724349410858893372") || (message.channel.id == "722436626248237076")) {
-            let FaqModuleRu = new Discord.MessageEmbed()
-            .setTitle(title)
-            .setDescription(descriptionru)
-            .setColor(client.colors.kamiblue)
-            .setFooter("カミブルー！", client.user.avatarURL())
-            message.channel.send(FaqModuleRu)
-        } else {
-            let FaqModuleEn = new Discord.MessageEmbed()
-            .setTitle(title)
-            .setDescription(descriptionen)
-            .setColor(client.colors.kamiblue)
-            .setFooter("カミブルー！", client.user.avatarURL())
-            message.channel.send(FaqModuleEn)
-        }
+        sendFAQMessage(title, title, descriptionru, descriptionen);
     } catch(e) {
-        if ((message.channel.id == "724349410858893372") || (message.channel.id == "722436626248237076")) {
-            let FaqModuleErrorRu = new Discord.MessageEmbed()
-            .setTitle("Ошибка")
-            .setDescription("\n**Модуль не найден!**")
-            .setColor(client.colors.kamiblue)
-            .setFooter("カミブルー！", client.user.avatarURL())
-            message.channel.send(FaqModuleErrorRu)
-        } else {
-            let FaqModuleErrorEn = new Discord.MessageEmbed()
-            .setTitle("Error")
-            .setDescription("\n**Module not found!**")
-            .setColor(client.colors.kamiblue)
-            .setFooter("カミブルー！", client.user.avatarURL())
-            message.channel.send(FaqModuleErrorEn)
-        }
+    	sendFAQMessage("Ошибка", "Error", "\n**Модуль не найден!**", "\n**Module not found!**");
     }
 };
 
 module.exports.config = {
     name: "module",
     aliases: [],
-    use: "module",
+    use: "module [Module]",
     description: "Information about modules",
     state: "gamma",
-    page: -1
+    page: 2
 };
