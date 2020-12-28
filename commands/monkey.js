@@ -25,5 +25,5 @@ module.exports.config = {
     use: "monkey",
     description: "funny monkey",
     state: "gamma",
-    page: 1
+    page: 3
 };

@@ -12,5 +12,5 @@ module.exports.config = {
     use: "smallrat",
     description: "SmallRat",
     state: "gamma",
-    page: 2
+    page: 3
 };

@@ -38,5 +38,5 @@ module.exports.config = {
     use: "randomchimpevent",
     description: "Truly, a random chimp event.",
     state: "gamma",
-    page: 1
+    page: 3
 };

@@ -13,5 +13,5 @@ module.exports.config = {
     use: "historian",
     description: "he will eat you",
     state: "gamma",
-    page: -1
+    page: 3
 };

@@ -12,5 +12,5 @@ module.exports.config = {
     use: "xiaro",
     description: "Prepend \`Trans rights~!\` :3 to your message",
     state: "gamma",
-    page: 1
+    page: 3
 };

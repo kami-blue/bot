@@ -17,8 +17,8 @@ const config = {
             "emoji": "<:kamiblue:759835844781277257>"
         },
         {
-            "name": "Github Commands",
-            "emoji": "<:jarfix:759835845157978152>"
+            "name": "Fun Commands",
+            "emoji": "🎉"
         },
         {
             "name": "Moderation & Utility Commands",
