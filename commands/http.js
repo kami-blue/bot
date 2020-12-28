@@ -4,7 +4,7 @@ const errors = require("./utils/httperrors");
 
 module.exports.run = async (client, message, args) => {
     if(errors.codes.includes(args[0].toLowerCase())) {
-        message.channel.send("https://http.cat/" + errors.codes[args[0]]);
+        message.channel.send("https://http.cat/" + errors.codes[args[0].toLowerCase()]);
     } else message.channel.send("Not a valid http error code!");
 }
 
