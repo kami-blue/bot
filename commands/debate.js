@@ -13,5 +13,5 @@ module.exports.config = {
     use: "debate",
     description: "Epic debate",
     state: "gamma",
-    page: 1
+    page: 3
 };

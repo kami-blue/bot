@@ -12,5 +12,5 @@ module.exports.config = {
     use: "bigrat",
     description: "BigRat",
     state: "gamma",
-    page: 2
+    page: 3
 };
