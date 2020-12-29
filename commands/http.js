@@ -1,11 +1,8 @@
 const Discord = require("discord.js");
 const fs = require("graceful-fs");
-const errors = require("./utils/httperrors");
 
 module.exports.run = async (client, message, args) => {
-    if(errors.codes.includes(args[0].toLowerCase())) {
-        message.channel.send("https://http.cat/" + errors.codes[args[0].toLowerCase()]);
-    } else message.channel.send("Not a valid http error code!");
+    message.channel.send("https://http.cat/" + args[0].toLowerCase());
 }
 
 module.exports.config = {
