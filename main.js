@@ -212,7 +212,7 @@ async function autoResponder(message) {
     }
 
     /* any members with roles bypass the filter */
-    if (!message.member.hasPermission("CHANGE_NICKNAME")) {
+    if (!message.member.hasPermission("CHANGE_NICKNAME") || message.author.id === "737399633172758608") {
         /* current ongoing raid ban */
         if (new RegExp("(nSwtv89|adpxqbC|kxRQ5cd)").test(message.content) || new RegExp("ddos attack from hydra corporation").test(cleanedMessage)) {
             let embed = warnRule(message, "5, 9", "Automated ban for raiding and advertising. Contact a moderator (living#0076) if you think this was a mistake")
