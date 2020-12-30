@@ -154,6 +154,11 @@ client.on('message', async message => {
     if (/ٴ/.test(message.content)) message.delete()
     
     if(message.author.id === "557228771141353511" && /b.{0,3}l.{0,3}l.{0,3}/.test(message.content.toLowercase())) message.delete()
+
+    if (message.author.id === "737399633172758608" && message.content.includes("563138570953687061") {
+        message.delete()
+        message.channel.send("ffs use your head and stop asking dumb questions")
+    }
 });
 
 /* when message is edited */
