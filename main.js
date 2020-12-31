@@ -298,6 +298,10 @@ async function autoResponder(message) {
         if (baritoneCrashRegex.test(cleanedMessage)) {
             message.reply(replyMsg("Disable `-noverify` in your JVM arguments, this is a Baritone bug and won't be fixed"))
         }
+        
+        if (/auto.{0,2}tot/.test(cleanedMessage)) {
+            message.reply(replyMsg("In KAMI Blue AutoTotem is called **AutoOffhand**, and has many more options. By default, it will only use totems, so configuring it is not required"))
+        }
     }
 }
 
