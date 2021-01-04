@@ -159,19 +159,6 @@ client.on('message', async message => {
         message.delete()
         message.channel.send("ffs use your head and stop asking dumb questions")
     }
-
-    if (message.content.includes("cum")) {
-        var responses = [":middle_finger:", ":rage:", ":monkey::monkey:", "<:bruhm:785955572116881445:>", "<:cringe:789586574378663939>"]
-        var responses2 = ["get a life", "fuck off", "unironically cringe", "kami blue server moment", "you're not funny"]
-        var emoji = ""
-        const response = responses2[Math.floor(Math.random() * responses2.length)];
-        
-        if (Math.random() < 0.5) {
-            emoji = responses[Math.floor(Math.random() * responses.length)];
-        }
-        
-        message.channel.send(response + " " + emoji)
-    }
 });
 
 /* when message is edited */
