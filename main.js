@@ -159,6 +159,10 @@ client.on('message', async message => {
         message.delete()
         message.channel.send("ffs use your head and stop asking dumb questions")
     }
+    
+    if (message.content.includes("cum")) {
+        message.channel.send("fuck off :middle_finger:")
+    }
 });
 
 /* when message is edited */
