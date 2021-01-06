@@ -101,8 +101,8 @@ module.exports.modules = {
     },
     capes: {
         name: "Capes",
-        descriptionru: "\n**Категория**: Client\n**Описание**: Управляет отображением плащей KAMI Blue.\nЕсли вы хотите плащ KAMI Blue, вы можете задонатить тут >\n__PayPal__: https://paypal.me/mik4a/5USD",
-        descriptionen: "\n**Category**: Client\n**Description**: Controls the display of KAMI Blue capes.\nIf you want a KAMI Blue cape, you can donate here >\n__PayPal__: https://paypal.me/mik4a/5USD"
+        descriptionru: "\n**Категория**: Client\n**Описание**: Управляет отображением плащей KAMI Blue.",
+        descriptionen: "\n**Category**: Client\n**Description**: Controls the display of KAMI Blue capes."
     },
     commandconfig: {
         name: "CommandConfig",
