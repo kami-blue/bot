@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const fs = require("graceful-fs");
 
 module.exports.run = async (client, message, args) => {
-    if ((message.channel.id == "724349410858893372") || (message.channel.id == "722436626248237076")) {
+    if (message.channel.id == "722436626248237076") {
         const embed = new Discord.MessageEmbed()
                 .setTitle("Установка")
                 .setDescription("KAMI Blue можно скачать из <#634549110145286156> или с нашего [сайта](https://kamiblue.org/download)\n\nЭто Forge мод на версию `1.12.2`. Вы можете сделать двойной клик по `.jar` файлу чтобы открыть установщик.\nЕсли вы истользуете MultiMC, переместите `.jar` файл в папку с модами\n\nИспользуйте `;kami` для получения дополнительной информации о различных версиях.")

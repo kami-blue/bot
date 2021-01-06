@@ -3,7 +3,7 @@ const fs = require("graceful-fs");
 
 module.exports.run = async (client, message, args) => {
     
-    if ((message.channel.id == "724349410858893372") || (message.channel.id == "722436626248237076")) {
+    if (message.channel.id == "722436626248237076") {
         const embed = new Discord.MessageEmbed()
                 .setTitle("дарить")
                 .setColor(client.colors.kamiblue)
