@@ -272,7 +272,7 @@ async function autoResponder(message) {
 
         /* game crash regex */
         if (crashRegex.test(cleanedMessage)) {
-            message.reply(replyMsg("Find the `debug.log` file inside `~/.minecraft/logs` and paste the contents to https://pastebin.com/, and the send the link."));
+            message.reply(replyMsg("Find the `debug.log` file inside `~/.minecraft/logs` and paste the contents to https://paste.ee/, and the send the link."));
         }
 
         /* new version regex */
