@@ -120,20 +120,6 @@ client.on('message', async message => {
     }
 });
 
-/* @author okk */
-client.on("messageDelete", (msg) => {
-    if(msg.content.startsWith(config.prefix)) {
-        if (!msg.member.hasPermission("CHANGE_NICKNAME")) {
-            const deleteEmbed = new Discord.MessageEmbed()
-                .setAuthor("カミブルー！", "https://cdn.discordapp.com/avatars/638403216278683661/1e8bed04cb18e1cb1239e208a01893a1.png", "https://kamiblue.org")
-                .setDescription(`Message "${msg.content}" by <@${msg.author.id}> was deleted.`)
-                .setColor(client.colors.red)
-                .setTimestamp();
-            msg.channel.send(deleteEmbed);
-        }
-    }
-});
-
 function extractPastebinLinks(link) {
     return /(pastebin.com\/(?![^A-z0-9]).{8})/g.exec(link)[1];
 }
