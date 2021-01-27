@@ -5,7 +5,7 @@ const exec = require('child_process').exec;
 const auth = require("../auth.json");
 
 module.exports.run = async (client, message, args) => {
-    if (!(message.author.id === "563138570953687061") && !(message.author.id === "297096161842429963")) return;
+    if (!(message.author.id === "242462997530804225") && !(message.author.id === "297096161842429963")) return;
     message.reply("Fetching version info...")
 
     exec('git rev-parse --verify HEAD', (error, stdout, stderr) => {
