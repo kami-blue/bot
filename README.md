@@ -1,5 +1,6 @@
 # The Javascript KAMI Blue Discord bot.
-**This project is no longer being updated to add any major features, if you want to add something substantial**
+
+**This project is now deprecated and archived**
 **Please go to [bot-kt](https://github.com/kami-blue/bot-kt).**
 ___
 [![Discord Mine](https://img.shields.io/discord/573954110454366214?label=chat&logo=discord&logoColor=white)](https://discord.gg/KfpqwZB)
